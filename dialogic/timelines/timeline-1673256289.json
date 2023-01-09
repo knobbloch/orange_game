@@ -1,0 +1,43 @@
+{
+	"events": [
+		{
+			"background": "res://Sprites/Cat1.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Этот котик очень хороший"
+		},
+		{
+			"background": "res://Sprites/Cat2.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "А этот очень плохой"
+		},
+		{
+			"background": "res://Sprites/Cat1.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Не перепутайте их"
+		},
+		{
+			"change_scene": "res://scenes/root.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1673256289.json",
+		"name": "Start of the game"
+	}
+}
