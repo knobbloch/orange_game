@@ -89,4 +89,3 @@ func updateTextures():
 
 func updateMoneyLabel():
 	labelAmountMoney.set_text(str(INVENTORY['gems']))
-
