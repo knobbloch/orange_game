@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/KinematicBody.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Inventory.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -37,5 +36,3 @@ shape = SubResource( 3 )
 transform = Transform( 0.0775219, -0.552497, -0.829902, 0.000601604, -0.832381, 0.554204, 0.996991, 0.0434622, 0.0641954, -3.32257, 2.67908, -0.461731 )
 
 [node name="KinematicBody" parent="." instance=ExtResource( 1 )]
-
-[node name="Inventory" parent="KinematicBody" instance=ExtResource( 2 )]
