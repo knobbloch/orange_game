@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Inventory.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Targets.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.2
@@ -23,7 +24,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 
 [node name="LookPivot" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.998564, 0 )
+transform = Transform( 0.999888, 0.0106324, 0.00128482, -0.0209583, 0.985182, 0.239893, 0.00128482, -0.121701, 0.985294, 0, 0.998565, 0 )
 
 [node name="Camera" type="Camera" parent="LookPivot"]
 
@@ -33,3 +34,9 @@ enabled = true
 cast_to = Vector3( 0, -3, 0 )
 
 [node name="Inventory" parent="." instance=ExtResource( 2 )]
+
+[node name="Targets" parent="." instance=ExtResource( 3 )]
+
+[node name="Dialogue" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0

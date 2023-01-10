@@ -30,13 +30,6 @@ var INVENTORY  = {
 
 func _ready():
 	addMoneyToInventory()
-	addMoneyToInventory()
-	addMoneyToInventory()
-	removeMoneyFromInventory(2)
-	addItemToInventory('krotovuha')
-	addItemToInventory('krotovuha')
-	addItemToInventory('krotovuha')
-	addItemToInventory('krotovuha')
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

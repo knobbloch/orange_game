@@ -7,6 +7,9 @@ const MOVE_SPEED: float = 5.0
 const GRAVITY_ACCELERATION: float = 9.8
 const JUMP_FORCE: float = 2.0
 onready var look_pivot: Spatial = $LookPivot
+onready var inventory: Control = $Inventory
+onready var targets: Control = $Targets
+onready var dialogue: Control = $Dialogue
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -36,8 +39,8 @@ func _physics_process(delta):
 			var x = $LookPivot/Camera/InteractionRay.get_collider()
 			print("COLLIDING")
 			print(x.get_name())
-			#if x.has_method("interact"):
-			x.interact()
+			if x.has_method("interact"):
+				x.interact(inventory, targets, dialogue)
 		
 	move_and_slide(input_move + gravity_local * MOVE_SPEED, Vector3.UP)
 	
