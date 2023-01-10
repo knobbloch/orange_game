@@ -13,7 +13,7 @@ func _ready():
 	# Initialization here
 	pass
 
-func interact():
+func interact(inventory, targets, dialogue):
 	if !animating:
 		if state == CLOSED:
 			$AnimationPlayer.play("open")
