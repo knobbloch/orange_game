@@ -1,9 +1,7 @@
 extends Control
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 onready var inventCells = [$ColorRect/TextureRect2, $ColorRect/TextureRect3, $ColorRect/TextureRect4, $ColorRect/TextureRect5]
 onready var labelAmountMoney = $ColorRect/TextureRect/money
 

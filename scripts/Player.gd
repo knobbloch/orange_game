@@ -37,7 +37,7 @@ func _physics_process(delta):
 			print("COLLIDING")
 			print(x.get_name())
 			#if x.has_method("interact"):
-			x.interact()
+			x.interat()
 		
 	move_and_slide(input_move + gravity_local * MOVE_SPEED, Vector3.UP)
 	
