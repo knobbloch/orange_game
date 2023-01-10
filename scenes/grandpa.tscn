@@ -12,17 +12,17 @@ uv1_scale = Vector3( 3, 2, 1 )
 
 [sub_resource type="BoxShape" id=4]
 
-[node name="Spatial" type="Spatial"]
+[node name="grandpa" type="Spatial"]
 
-[node name="grandpa" type="StaticBody" parent="."]
+[node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 2.95731, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 2 )
 
-[node name="MeshInstance" type="MeshInstance" parent="grandpa"]
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.509438, 0, 0, 0, 1, 0, 0, 0, 0.05, -0.5, 1, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="grandpa"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 0.509438, 0, 0, 0, 1, 0, 0, 0, 0.05, -0.5, 1, 0 )
 shape = SubResource( 4 )
