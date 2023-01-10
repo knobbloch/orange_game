@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var nomber=1
 
 func _ready():
