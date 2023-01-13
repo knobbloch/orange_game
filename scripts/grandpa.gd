@@ -1,10 +1,21 @@
 extends StaticBody
 
-onready var inventCells = [$ColorRect/TextureRect5]
+var is_dualogue_continue=false
+
 func _ready():
-	pass # Replace with function body.
+	pass
+
+onready var inventCells = [$ColorRect/TextureRect5]
 
 func interact(inventory, targets, dialogue):
-	print("HIII")
+	get_tree().change_scene("res://scenes/ClsCutScene.tscn")
 	inventory.addMoneyToInventory()
-
+	dialogue.SpeakerIs("Дед")
+	if(!is_dualogue_continue):
+		dialogue.StartDialogue()
+		is_dualogue_continue=true
+		dialogue.ChangeTextTo("ХАХА,Я НЕ ДЕД")
+	else:
+		dialogue.CloseDialogue()
+		is_dualogue_continue=false
+	
