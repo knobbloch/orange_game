@@ -10,7 +10,9 @@ extends StaticBody
 func _ready():
 	pass # Replace with function body.
 
-
+func interact(inventory, targets, dialogue):
+	inventory.addItemToInventory("protein")
+	self.get_parent().remove_child(self)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
