@@ -21,7 +21,7 @@ func _process(delta):
 		nomber+=1
 		MainText=OpenTxtFile()
 	if nomber==10:
-		get_tree().change_scene("res://scenes/root.tscn")
+		GLOBAL.nextScene("root")
 	$Dogecoin.texture = load("res://assets/cut scenes/"+String(nomber)+".png")
 	$RichTextLabel.text= MainText
 
