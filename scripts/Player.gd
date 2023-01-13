@@ -31,6 +31,7 @@ func _physics_process(delta):
 		gravity_local += GRAVITY_ACCELERATION * Vector3.DOWN * delta
 	else:
 		gravity_local = GRAVITY_ACCELERATION * -get_floor_normal() * delta
+		#GLOBAL.playMusic("boot")
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		gravity_local = Vector3.UP * JUMP_FORCE
 		
