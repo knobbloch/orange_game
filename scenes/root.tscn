@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/new_spatialmaterial.tres" type="Material" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://scenes/krot.tscn" type="PackedScene" id=27]
 [ext_resource path="res://scenes/TV.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/fountain.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scenes/fancy_suit.tscn" type="PackedScene" id=30]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -434,6 +435,9 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape" type="CollisionShape" parent="gym/MeshInstance13/StaticBody"]
 shape = SubResource( 3 )
+
+[node name="fancy_suit" parent="gym" instance=ExtResource( 30 )]
+transform = Transform( 0.00121877, 0, 0.0180221, 0, 0.520663, 0, -0.714928, 0, 0.0937608, -7.46711, 0, -5.16719 )
 
 [node name="Door" parent="gym" instance=ExtResource( 7 )]
 transform = Transform( -1.44568, 0, -1.26385e-07, 0, 1.12816, 0, 8.74228e-08, 0, -1, -7.11759, 0.0624256, -8.1061 )
