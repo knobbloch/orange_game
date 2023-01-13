@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/krot.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Targets.gd" type="Script" id=2]
 
 [node name="Targets" type="Control"]
@@ -15,7 +14,6 @@ margin_left = -193.0
 margin_top = 54.0
 margin_right = -91.0
 margin_bottom = 122.0
-texture = ExtResource( 1 )
 expand = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -25,7 +23,6 @@ margin_left = -51.0
 margin_top = 54.0
 margin_right = 51.0
 margin_bottom = 122.0
-texture = ExtResource( 1 )
 expand = true
 
 [node name="TextureRect3" type="TextureRect" parent="."]
@@ -35,7 +32,6 @@ margin_left = 88.0
 margin_top = 54.0
 margin_right = 190.0
 margin_bottom = 122.0
-texture = ExtResource( 1 )
 expand = true
 
 [node name="Label" type="Label" parent="."]
