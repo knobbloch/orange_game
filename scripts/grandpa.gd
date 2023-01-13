@@ -1,11 +1,11 @@
 extends StaticBody
 
+
 var is_dualogue_continue=false
 
 func _ready():
 	pass
 
-onready var inventCells = [$ColorRect/TextureRect5]
 
 func interact(inventory, targets, dialogue):
 	get_tree().change_scene("res://scenes/ClsCutScene.tscn")
@@ -19,3 +19,4 @@ func interact(inventory, targets, dialogue):
 		dialogue.CloseDialogue()
 		is_dualogue_continue=false
 	
+

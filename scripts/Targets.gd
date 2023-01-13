@@ -5,14 +5,33 @@ onready var getSpirtTaskIndicator = $TextureRect2
 onready var getKrotTaskIndicator = $TextureRect3
 
 
+var uncompletedJarTaskTexture = 'res://assets/jarUncomplited.png'
+var uncompletedSpirtTaskTexture = 'res://assets/SpirtUncomplited.png'
+var uncompletedKrotTaskTexture = 'res://assets/krotUncomplited.png'
+var completedJarTaskTexture = 'res://assets/jarComplited.png'
+var completedSpirtTaskTexture = 'res://assets/spirtComplited.png'
+var completedKrotTaskTexture = 'res://assets/krotComplited.png'
+
+
 func _ready():
-	pass
+	setJarTaskUncompleted()
+	setSpirtTaskUncompleted()
+	setKrotTaskUncompleted()
 
-func getJarTaskCompleted():
-	getJarTaskIndicator.set_texture(load('res://assets/jar.png'))
+func setJarTaskCompleted():
+	getJarTaskIndicator.set_texture(load(completedJarTaskTexture))
 
-func getSpirtTaskCompleted():
-	getSpirtTaskIndicator.set_texture(load('res://assets/dogecoin.png'))
+func setSpirtTaskCompleted():
+	getSpirtTaskIndicator.set_texture(load(completedSpirtTaskTexture))
 
-func getKrotTaskCompleted():
-	getSpirtTaskIndicator.set_texture(load('res://assets/jar.png'))
+func setKrotTaskCompleted():
+	getKrotTaskIndicator.set_texture(load(completedKrotTaskTexture))
+
+func setJarTaskUncompleted():
+	getJarTaskIndicator.set_texture(load(uncompletedJarTaskTexture))
+
+func setSpirtTaskUncompleted():
+	getSpirtTaskIndicator.set_texture(load(uncompletedSpirtTaskTexture))
+
+func setKrotTaskUncompleted():
+	getKrotTaskIndicator.set_texture(load(uncompletedKrotTaskTexture))

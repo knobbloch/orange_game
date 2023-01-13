@@ -1,12 +1,12 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/new_spatialmaterial.tres" type="Material" id=2]
 [ext_resource path="res://assets/stairs/Stairs_Side.material" type="Material" id=3]
 [ext_resource path="res://assets/stairs/Stairs_A.material" type="Material" id=4]
-[ext_resource path="res://assets/grandpa.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/grandpa.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/gigachad.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Door.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Door.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/math.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/wise tree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/shlepa.tscn" type="PackedScene" id=10]
@@ -24,6 +24,12 @@
 [ext_resource path="res://scenes/ticket.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/gem.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/alcohol mashine.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/cave.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/bigScreen.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/krot.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/TV.tscn" type="PackedScene" id=28]
+[ext_resource path="res://scenes/fountain.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scenes/fancy_suit.tscn" type="PackedScene" id=30]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -66,10 +72,19 @@ surfaces/0 = {
 [sub_resource type="ConcavePolygonShape" id=7]
 data = PoolVector3Array( -0.14, 0.736, -1.2, -0.14, 1.2, 0.96, -0.14, 0.736, 0.96, -0.14, 0.736, -1.2, -0.14, 1.2, -1.2, -0.14, 1.2, 0.96, -0.14, 1.2, -1.2, 0.14, 1.2, 0.96, -0.14, 1.2, 0.96, -0.14, 1.2, -1.2, 0.14, 1.2, -1.2, 0.14, 1.2, 0.96, 0.14, -0.76, -1.2, 0.14, -1.2, -0.8, 0.14, -0.76, -0.4, 0.14, -0.76, -1.2, 0.14, -1.2, -1.2, 0.14, -1.2, -0.8, 0.14, -1.2, -1.2, -0.14, -1.2, -0.8, 0.14, -1.2, -0.8, 0.14, -1.2, -1.2, -0.14, -1.2, -1.2, -0.14, -1.2, -0.8, 0.14, 1.2, -1.2, 0.14, 0.736, 0.96, 0.14, 1.2, 0.96, 0.14, 1.2, -1.2, 0.14, 0.736, -1.2, 0.14, 0.736, 0.96, -0.14, 0.56, -1.2, -0.14, 0.736, 0.96, -0.14, 0.56, 0.8, -0.14, 0.56, -1.2, -0.14, 0.736, -1.2, -0.14, 0.736, 0.96, -0.14, -1.2, -1.2, -0.14, -0.76, -0.4, -0.14, -1.2, -0.8, -0.14, -1.2, -1.2, -0.14, -0.76, -1.2, -0.14, -0.76, -0.4, -0.14, -0.76, -1.2, -0.14, -0.32, 0, -0.14, -0.76, -0.4, -0.14, -0.76, -1.2, -0.14, -0.32, -1.2, -0.14, -0.32, 0, -0.14, -0.32, -1.2, -0.14, 0.12, 0.4, -0.14, -0.32, 0, -0.14, -0.32, -1.2, -0.14, 0.12, -1.2, -0.14, 0.12, 0.4, -0.14, 0.12, -1.2, -0.14, 0.56, 0.8, -0.14, 0.12, 0.4, -0.14, 0.12, -1.2, -0.14, 0.56, -1.2, -0.14, 0.56, 0.8, 0.14, 0.736, 0.96, -0.14, 0.56, 0.8, -0.14, 0.736, 0.96, 0.14, 0.736, 0.96, 0.14, 0.56, 0.8, -0.14, 0.56, 0.8, 0.14, 0.56, 0.8, -0.14, 0.12, 0.4, -0.14, 0.56, 0.8, 0.14, 0.56, 0.8, 0.14, 0.12, 0.4, -0.14, 0.12, 0.4, 0.14, -0.32, 0, -0.14, -0.76, -0.4, -0.14, -0.32, 0, 0.14, -0.32, 0, 0.14, -0.76, -0.4, -0.14, -0.76, -0.4, 0.14, 0.736, -1.2, 0.14, 0.56, 0.8, 0.14, 0.736, 0.96, 0.14, 0.736, -1.2, 0.14, 0.56, -1.2, 0.14, 0.56, 0.8, 0.14, 0.56, -1.2, 0.14, 0.12, 0.4, 0.14, 0.56, 0.8, 0.14, 0.56, -1.2, 0.14, 0.12, -1.2, 0.14, 0.12, 0.4, 0.14, 0.12, -1.2, 0.14, -0.32, 0, 0.14, 0.12, 0.4, 0.14, 0.12, -1.2, 0.14, -0.32, -1.2, 0.14, -0.32, 0, 0.14, -0.32, -1.2, 0.14, -0.76, -0.4, 0.14, -0.32, 0, 0.14, -0.32, -1.2, 0.14, -0.76, -1.2, 0.14, -0.76, -0.4, -0.14, -1.2, -0.8, 0.14, -1.2, -0.1596, 0.14, -1.2, -0.8, -0.14, -1.2, -0.8, -0.14, -1.2, -0.1596, 0.14, -1.2, -0.1596, 0.14, -0.76, -0.4, -0.14, -0.76, -0.1139, -0.14, -0.76, -0.4, 0.14, -0.76, -0.4, 0.14, -0.76, -0.1139, -0.14, -0.76, -0.1139, -0.14, -0.32, 0, 0.14, -0.32, 0.435, 0.14, -0.32, 0, -0.14, -0.32, 0, -0.14, -0.32, 0.435, 0.14, -0.32, 0.435, 0.14, 0.12, 0.4, -0.14, 0.12, 0.481, -0.14, 0.12, 0.4, 0.14, 0.12, 0.4, 0.14, 0.12, 0.481, -0.14, 0.12, 0.481, -0.14, 0.736, 0.96, 0.14, 0.736, 1.1569, 0.14, 0.736, 0.96, -0.14, 0.736, 0.96, -0.14, 0.736, 1.1569, 0.14, 0.736, 1.1569, 0.14, -1.1489, -0.1, -0.14, -1.2, -0.1596, -0.14, -1.1489, -0.1, 0.14, -1.1489, -0.1, 0.14, -1.2, -0.1596, -0.14, -1.2, -0.1596, -0.14, -0.32, 0.435, 0.14, -0.2643, 0.5, 0.14, -0.32, 0.435, -0.14, -0.32, 0.435, -0.14, -0.2643, 0.5, 0.14, -0.2643, 0.5, -0.14, 0.736, 1.1569, 0.14, 0.773, 1.2, 0.14, 0.736, 1.1569, -0.14, 0.736, 1.1569, -0.14, 0.773, 1.2, 0.14, 0.773, 1.2, 0.14, 1.1817, 1.2, -0.14, 0.773, 1.2, -0.14, 1.1817, 1.2, 0.14, 1.1817, 1.2, 0.14, 0.773, 1.2, -0.14, 0.773, 1.2, -0.14, 1.1817, 1.2, 0.14, 1.2, 1.1787, 0.14, 1.1817, 1.2, -0.14, 1.1817, 1.2, -0.14, 1.2, 1.1787, 0.14, 1.2, 1.1787, 0.14, 1.2, 0.96, -0.14, 1.2, 1.1787, -0.14, 1.2, 0.96, 0.14, 1.2, 0.96, 0.14, 1.2, 1.1787, -0.14, 1.2, 1.1787, -0.14, 0.1037, 0.5, 0.14, 0.12, 0.481, 0.14, 0.1037, 0.5, -0.14, 0.1037, 0.5, -0.14, 0.12, 0.481, 0.14, 0.12, 0.481, 0.14, 0.1037, 0.5, -0.14, -0.2643, 0.5, -0.14, 0.1037, 0.5, 0.14, 0.1037, 0.5, 0.14, -0.2643, 0.5, -0.14, -0.2643, 0.5, -0.14, -0.7719, -0.1, 0.14, -0.76, -0.1139, 0.14, -0.7719, -0.1, -0.14, -0.7719, -0.1, -0.14, -0.76, -0.1139, 0.14, -0.76, -0.1139, 0.14, -0.7719, -0.1, -0.14, -1.1489, -0.1, -0.14, -0.7719, -0.1, 0.14, -0.7719, -0.1, 0.14, -1.1489, -0.1, -0.14, -1.1489, -0.1, 0.14, -0.76, -0.4, 0.14, -1.2, -0.8, 0.14, -1.2, -0.1596, 0.14, -1.2, -0.1596, 0.14, -1.1489, -0.1, 0.14, -0.76, -0.4, 0.14, -1.1489, -0.1, 0.14, -0.7719, -0.1, 0.14, -0.76, -0.4, 0.14, -0.7719, -0.1, 0.14, -0.76, -0.1139, 0.14, -0.76, -0.4, 0.14, 0.12, 0.4, 0.14, -0.32, 0, 0.14, -0.32, 0.435, 0.14, -0.32, 0.435, 0.14, -0.2643, 0.5, 0.14, 0.12, 0.4, 0.14, -0.2643, 0.5, 0.14, 0.1037, 0.5, 0.14, 0.12, 0.4, 0.14, 0.1037, 0.5, 0.14, 0.12, 0.481, 0.14, 0.12, 0.4, 0.14, 1.2, 0.96, 0.14, 0.736, 0.96, 0.14, 0.736, 1.1569, 0.14, 0.736, 1.1569, 0.14, 0.773, 1.2, 0.14, 1.2, 0.96, 0.14, 0.773, 1.2, 0.14, 1.1817, 1.2, 0.14, 1.2, 0.96, 0.14, 1.1817, 1.2, 0.14, 1.2, 1.1787, 0.14, 1.2, 0.96, -0.14, 0.773, 1.2, -0.14, 0.736, 1.1569, -0.14, 0.736, 0.96, -0.14, 0.736, 0.96, -0.14, 1.2, 0.96, -0.14, 0.773, 1.2, -0.14, 1.2, 0.96, -0.14, 1.1817, 1.2, -0.14, 0.773, 1.2, -0.14, 1.2, 0.96, -0.14, 1.2, 1.1787, -0.14, 1.1817, 1.2, -0.14, -1.2, -0.1596, -0.14, -1.2, -0.8, -0.14, -0.76, -0.4, -0.14, -0.76, -0.4, -0.14, -1.1489, -0.1, -0.14, -1.2, -0.1596, -0.14, -0.76, -0.4, -0.14, -0.7719, -0.1, -0.14, -1.1489, -0.1, -0.14, -0.76, -0.4, -0.14, -0.76, -0.1139, -0.14, -0.7719, -0.1, -0.14, -0.2643, 0.5, -0.14, -0.32, 0.435, -0.14, -0.32, 0, -0.14, -0.32, 0, -0.14, 0.12, 0.4, -0.14, -0.2643, 0.5, -0.14, 0.12, 0.4, -0.14, 0.1037, 0.5, -0.14, -0.2643, 0.5, -0.14, 0.12, 0.4, -0.14, 0.12, 0.481, -0.14, 0.1037, 0.5 )
 
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.215686, 0.207843, 0.207843, 1 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.215686, 0.207843, 0.207843, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0.215686, 0.207843, 0.207843, 1 )
+
 [node name="root" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.996205, 0, -0.087034, 0, 0.712259, 0, 0.087034, 0, -0.996205, 0, 0, 32.246 )
+transform = Transform( -0.996205, 0, -0.087034, 0, 0.712259, 0, 0.087034, 0, -0.996205, -6.8051, -3.44434, -22.8626 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.0775219, -0.552497, -0.829902, 0.000601604, -0.832381, 0.554204, 0.996991, 0.0434622, 0.0641953, -3.32257, 2.67908, -0.461731 )
@@ -235,6 +250,19 @@ transform = Transform( -0.164514, 0, -0.986375, 0, 1, 0, 0.986375, 0, -0.164514,
 [node name="crowd" parent="city" instance=ExtResource( 19 )]
 transform = Transform( -0.0643581, 0, -0.997927, 0, 1, 0, 0.997927, 0, -0.0643581, -2.83118, 0, 31.0161 )
 
+[node name="MeshInstance18" type="MeshInstance" parent="city"]
+transform = Transform( 10.627, 0, 0, 0, -1.27064e-09, 1.18115, 0, -0.0290689, -5.16297e-08, -6.50022, 1.18851, 33.0142 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody" type="StaticBody" parent="city/MeshInstance18"]
+
+[node name="CollisionShape" type="CollisionShape" parent="city/MeshInstance18/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="fountain" parent="city" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.89919, 0, 15.9288 )
+
 [node name="Grandpa house" type="Room" parent="."]
 
 [node name="MeshInstance7" type="MeshInstance" parent="Grandpa house"]
@@ -298,7 +326,20 @@ skeleton = NodePath("../../..")
 shape = SubResource( 3 )
 
 [node name="grandpa" parent="Grandpa house" instance=ExtResource( 5 )]
-transform = Transform( -0.073653, 0, -0.209413, 0, 0.203364, 0, 0.402411, 0, -0.0383287, 5.98545, 0.614074, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.14053, 0, 0 )
+
+[node name="MeshInstance10" type="MeshInstance" parent="Grandpa house"]
+transform = Transform( 2.30268, 0, 0, 0, 0.0290689, 0, 0, 0, 2.66251, 4.604, 2.36407, -0.321 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody" type="StaticBody" parent="Grandpa house/MeshInstance10"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Grandpa house/MeshInstance10/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="TV" parent="Grandpa house" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36422, 0, -1.90607 )
 
 [node name="gym" type="Room" parent="."]
 
@@ -382,11 +423,24 @@ skeleton = NodePath("../..")
 [node name="CollisionShape" type="CollisionShape" parent="gym/MeshInstance11/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="Door" parent="gym" instance=ExtResource( 7 )]
-transform = Transform( -1.43695, 0, -1.25622e-07, 0, 1.17588, 0, 8.74228e-08, 0, -1, -7.07421, 0, -8.1663 )
-
 [node name="gigachad" parent="gym" instance=ExtResource( 6 )]
 transform = Transform( 0.906109, 0, -0.423045, 0, 1, 0, 0.423045, 0, 0.906109, -2.14975, 0, -6.45344 )
+
+[node name="MeshInstance13" type="MeshInstance" parent="gym"]
+transform = Transform( 4.1447, 0, 0, 0, 0.0290689, 0, 0, 0, 3.11896, -4.746, 2.37898, -5.00981 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody" type="StaticBody" parent="gym/MeshInstance13"]
+
+[node name="CollisionShape" type="CollisionShape" parent="gym/MeshInstance13/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="fancy_suit" parent="gym" instance=ExtResource( 30 )]
+transform = Transform( 0.00121877, 0, 0.0180221, 0, 0.520663, 0, -0.714928, 0, 0.0937608, -7.46711, 0, -5.16719 )
+
+[node name="Door" parent="gym" instance=ExtResource( 7 )]
+transform = Transform( -1.44568, 0, -1.26385e-07, 0, 1.12816, 0, 8.74228e-08, 0, -1, -7.11759, 0.0624256, -8.1061 )
 
 [node name="dungeon" type="Room" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0245628 )
@@ -437,7 +491,7 @@ skeleton = NodePath("../../..")
 shape = SubResource( 3 )
 
 [node name="MeshInstance8" type="MeshInstance" parent="dungeon"]
-transform = Transform( -2.05671e-07, -0.0290689, 0, -2.05671e-07, 5.55415e-17, 2.07709, -8.49657, 2.2945e-09, -1.63951e-07, -3.02812, -2.56537, -25.1621 )
+transform = Transform( -2.05671e-07, -0.0290689, 0, -3.96208e-07, 1.06996e-16, 4.00134, -14.3264, 3.86886e-09, -2.76445e-07, -2.99302, -1.59223, -22.5248 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../../..")
 
@@ -447,23 +501,13 @@ skeleton = NodePath("../../..")
 shape = SubResource( 3 )
 
 [node name="MeshInstance9" type="MeshInstance" parent="dungeon"]
-transform = Transform( 7.78816, 0, 0, 0, 0.0290689, 0, 0, 0, 7.61516, -10.7047, -4.33296, -24.3933 )
+transform = Transform( 7.78816, 0, 0, 0, 0.0290689, 0, 0, 0, 7.61516, -10.7047, -4.33296, -21.4667 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../../..")
 
 [node name="StaticBody" type="StaticBody" parent="dungeon/MeshInstance9"]
 
 [node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance9/StaticBody"]
-shape = SubResource( 3 )
-
-[node name="MeshInstance15" type="MeshInstance" parent="dungeon"]
-transform = Transform( -1.46201e-07, -0.0290689, -5.16297e-08, 0, -1.27064e-09, 1.18115, -1.10254, 4.18851e-10, 7.43928e-16, 4.1386, 1.18851, 34.0654 )
-mesh = SubResource( 1 )
-skeleton = NodePath("../..")
-
-[node name="StaticBody" type="StaticBody" parent="dungeon/MeshInstance15"]
-
-[node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance15/StaticBody"]
 shape = SubResource( 3 )
 
 [node name="MeshInstance10" type="MeshInstance" parent="dungeon"]
@@ -496,8 +540,51 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance12/StaticBody"]
 shape = SubResource( 3 )
 
+[node name="dungeon master" parent="dungeon" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8797, -4.06883, -18.4333 )
+
+[node name="MeshInstance14" type="MeshInstance" parent="dungeon"]
+transform = Transform( 8.25872, 0, 0, 0, -2.23446e-09, 2.07709, 0, -0.0290689, -5.16296e-08, -11.3276, -2.19902, -28.9661 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+
+[node name="StaticBody" type="StaticBody" parent="dungeon/MeshInstance14"]
+
+[node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance14/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance16" type="MeshInstance" parent="dungeon"]
+transform = Transform( 8.04535, 0, 0, 0, 0.0290689, 0, 0, 0, 5.42116, -10.8344, -0.518823, -24.7551 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+
+[node name="StaticBody" type="StaticBody" parent="dungeon/MeshInstance16"]
+
+[node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance16/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance18" type="MeshInstance" parent="dungeon"]
+transform = Transform( -2.05671e-07, -0.0290689, 0, -3.81482e-07, 1.03019e-16, 3.85262, -5.52653, 1.49244e-09, -1.06641e-07, -8.81967, -1.45249, -13.7253 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+
+[node name="StaticBody" type="StaticBody" parent="dungeon/MeshInstance18"]
+
+[node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance18/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance19" type="MeshInstance" parent="dungeon"]
+transform = Transform( 3.45275, 0, 0, 0, 0.0290689, 0, 0, 0, 6.26818, -5.36336, 2.34307, -14.4291 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+
+[node name="StaticBody" type="StaticBody" parent="dungeon/MeshInstance19"]
+
+[node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance19/StaticBody"]
+shape = SubResource( 3 )
+
 [node name="MeshInstance13" type="MeshInstance" parent="dungeon"]
-transform = Transform( -2.05671e-07, -0.0290689, -9.07925e-08, 0, -1.27064e-09, 2.07709, -1.92871, 5.20847e-10, 1.62679e-15, -8.85261, -2.19902, -17.4163 )
+transform = Transform( 2.93555, 0, 0, 0, -1.49617e-09, 1.3908, 0, -0.0290689, -5.16296e-08, -5.94776, 0.861723, -19.1983 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../../..")
 
@@ -506,14 +593,15 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance13/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="math" parent="dungeon" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.393, -3.63329, -28.4697 )
+[node name="MeshInstance17" type="MeshInstance" parent="dungeon"]
+transform = Transform( 4.85105, 0, 0, 0, 0.0290689, 0, 0, 0, 2.57294, -13.6928, -0.518823, -16.8711 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
 
-[node name="dungeon master" parent="dungeon" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.73355, -4.06883, -19.9693 )
+[node name="StaticBody" type="StaticBody" parent="dungeon/MeshInstance17"]
 
-[node name="ticket" parent="dungeon" instance=ExtResource( 22 )]
-transform = Transform( 0.741834, 0, 0, 0, 0.501785, 0, 0, 0, 1, -9.51386, -3.45913, -29.7054 )
+[node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance17/StaticBody"]
+shape = SubResource( 3 )
 
 [node name="bank" type="Room" parent="."]
 
@@ -576,6 +664,16 @@ transform = Transform( 0.638016, 0, 0, 0, 0.574508, 0, 0, 0, 1, -11.0431, 0.3080
 [node name="gem" parent="bank" instance=ExtResource( 23 )]
 transform = Transform( 0.515455, 0, 0, 0, 0.414192, 0, 0, 0, 1, -14.0991, 0, 6.87266 )
 
+[node name="MeshInstance11" type="MeshInstance" parent="bank"]
+transform = Transform( 2.81354, 0, 0, 0, 0.0290689, 0, 0, 0, 3.085, -13.2394, 2.36794, 6.22065 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody" type="StaticBody" parent="bank/MeshInstance11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="bank/MeshInstance11/StaticBody"]
+shape = SubResource( 3 )
+
 [node name="cinema" type="Room" parent="."]
 
 [node name="MeshInstance10" type="MeshInstance" parent="cinema"]
@@ -629,7 +727,20 @@ skeleton = NodePath("../..")
 shape = SubResource( 3 )
 
 [node name="cinema worker" parent="cinema" instance=ExtResource( 13 )]
-transform = Transform( -0.010594, 0, -0.999944, 0, 1, 0, 0.999944, 0, -0.010594, -2.7282, 0, 12.5335 )
+transform = Transform( -0.010594, 0, -0.999944, 0, 1, 0, 0.999944, 0, -0.010594, -2.48294, 0, 11.992 )
+
+[node name="MeshInstance15" type="MeshInstance" parent="cinema"]
+transform = Transform( 3.30592, 0, 0, 0, 0.0290689, 0, 0, 0, 4.94047, 1.0748, 2.35419, 17.0958 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody" type="StaticBody" parent="cinema/MeshInstance15"]
+
+[node name="CollisionShape" type="CollisionShape" parent="cinema/MeshInstance15/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="bigScreen" parent="cinema" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63254, 0, 20.9547 )
 
 [node name="market" type="Room" parent="."]
 
@@ -663,16 +774,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape" type="CollisionShape" parent="market/MeshInstance14/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="MeshInstance18" type="MeshInstance" parent="market"]
-transform = Transform( 10.627, 0, 0, 0, -1.27064e-09, 1.18115, 0, -0.0290689, -5.16297e-08, -6.50022, 1.18851, 33.0142 )
-mesh = SubResource( 1 )
-skeleton = NodePath("../..")
-
-[node name="StaticBody" type="StaticBody" parent="market/MeshInstance18"]
-
-[node name="CollisionShape" type="CollisionShape" parent="market/MeshInstance18/StaticBody"]
-shape = SubResource( 3 )
-
 [node name="MeshInstance19" type="MeshInstance" parent="market"]
 transform = Transform( 4.13713, 0, 0, 0, 0.0290689, 0, 0, 0, 4.57137, -12.4334, 0.05, 29.0661 )
 mesh = SubResource( 1 )
@@ -688,6 +789,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4323, 0, 31.3979 )
 
 [node name="alcohol mashine" parent="market" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1011, 0, 27.2135 )
+
+[node name="MeshInstance20" type="MeshInstance" parent="market"]
+transform = Transform( 4.13713, 0, 0, 0, 0.0290689, 0, 0, 0, 4.57137, -12.4334, 2.33283, 29.0661 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody" type="StaticBody" parent="market/MeshInstance20"]
+
+[node name="CollisionShape" type="CollisionShape" parent="market/MeshInstance20/StaticBody"]
+shape = SubResource( 3 )
 
 [node name="pharmacy" type="Room" parent="."]
 
@@ -712,7 +823,7 @@ skeleton = NodePath("../..")
 shape = SubResource( 3 )
 
 [node name="MeshInstance14" type="MeshInstance" parent="pharmacy"]
-transform = Transform( -1.46201e-07, -0.0290689, -5.16297e-08, 0, -1.27064e-09, 1.18115, -1.53913, 5.8471e-10, 1.03851e-15, 4.16, 1.189, 28.58 )
+transform = Transform( -1.46201e-07, -0.0290689, -5.16297e-08, 0, -1.27064e-09, 1.18115, -1.73897, 6.60629e-10, 1.17335e-15, 4.16, 1.189, 29.1015 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 
@@ -746,3 +857,68 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.1349, 0, 29.615 )
 
 [node name="protein" parent="pharmacy" instance=ExtResource( 20 )]
 transform = Transform( 0.471342, 0, 0, 0, 0.547665, 0, 0, 0, 1, 6.52134, 0, 33.5742 )
+
+[node name="MeshInstance18" type="MeshInstance" parent="pharmacy"]
+transform = Transform( 2.97057, 0, 0, 0, 0.0290689, 0, 0, 0, 3.65317, 7.10318, 2.36304, 31.126 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody" type="StaticBody" parent="pharmacy/MeshInstance18"]
+
+[node name="CollisionShape" type="CollisionShape" parent="pharmacy/MeshInstance18/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance15" type="MeshInstance" parent="pharmacy"]
+transform = Transform( -1.46201e-07, -0.0290689, -5.16297e-08, 0, -1.27064e-09, 1.18115, -1.23895, 4.70674e-10, 8.35972e-16, 4.1386, 1.18851, 33.6045 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody" type="StaticBody" parent="pharmacy/MeshInstance15"]
+
+[node name="CollisionShape" type="CollisionShape" parent="pharmacy/MeshInstance15/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="cave" parent="." instance=ExtResource( 25 )]
+transform = Transform( -6.12487e-09, 0, 0.141139, 0, 0.152465, 0, -0.140121, 0, -6.1694e-09, -50.063, -2.7221, -30.5376 )
+
+[node name="MeshInstance10" type="MeshInstance" parent="cave"]
+transform = Transform( 2.07874, -0.0279938, 4.01116e-08, -1.03873e-06, 2.80509e-16, 10.4902, -9.40986, -0.00991985, -1.81574e-07, 16.9269, -7.59982, 134.035 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = SubResource( 8 )
+
+[node name="StaticBody" type="StaticBody" parent="cave/MeshInstance10"]
+
+[node name="CollisionShape" type="CollisionShape" parent="cave/MeshInstance10/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance11" type="MeshInstance" parent="cave"]
+transform = Transform( 2.12556, -0.0262712, -4.66606e-08, 0, -8.17426e-09, 7.59856, -9.50819, -0.0244668, -4.34557e-08, -47.2609, -6.96992, 28.7438 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = SubResource( 9 )
+
+[node name="StaticBody" type="StaticBody" parent="cave/MeshInstance11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="cave/MeshInstance11/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance12" type="MeshInstance" parent="cave"]
+transform = Transform( 10.6652, -1.6212e-09, -2.87944e-15, 0, -8.74767e-09, 8.13158, 2.58642e-07, -0.0290689, -5.16296e-08, 10.4834, -5.6377, 8.62259 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = SubResource( 10 )
+
+[node name="StaticBody" type="StaticBody" parent="cave/MeshInstance12"]
+
+[node name="CollisionShape" type="CollisionShape" parent="cave/MeshInstance12/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="ticket" parent="cave" instance=ExtResource( 22 )]
+transform = Transform( -2.31418e-07, 0, -7.13669, 0, 3.29115, 0, 5.25605, 0, -3.09705e-07, -24.8365, -9.65644, 49.8246 )
+
+[node name="math" parent="cave" instance=ExtResource( 8 )]
+transform = Transform( -3.11955e-07, 0, -7.13669, 0, 6.55888, 0, 7.08521, 0, -3.09704e-07, -33.1076, -11.7638, 49.4341 )
+
+[node name="krot" parent="cave" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, 3.55271e-14, 0, 1, 11.2791, -9.42388, 11.4096 )
