@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Inventory.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Targets.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Dialogue.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.2
@@ -37,6 +38,4 @@ cast_to = Vector3( 0, -3, 0 )
 
 [node name="Targets" parent="." instance=ExtResource( 3 )]
 
-[node name="Dialogue" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Dialogue" parent="." instance=ExtResource( 4 )]
