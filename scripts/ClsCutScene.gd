@@ -23,7 +23,7 @@ func _process(delta):
 		if nomber==21:
 			$DialogeBack.visible=!$DialogeBack.visible
 		MainText=OpenTxtFile()
-	#if nomber==10:
-		#get_tree().change_scene("res://scenes/root.tscn")
+	#if nomber==22:
+		#GLOBAL.nextScene("")
 	$Dogecoin.texture = load("res://assets/cut scenes/"+String(nomber)+".png")
 	$RichTextLabel.text= MainText
