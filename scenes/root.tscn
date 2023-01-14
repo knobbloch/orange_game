@@ -91,7 +91,7 @@ data = PoolVector3Array( -0.14, 0.736, -1.2, -0.14, 1.2, 0.96, -0.14, 0.736, 0.9
 script = ExtResource( 31 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.996205, 0, -0.087034, 0, 0.712259, 0, 0.087034, 0, -0.996205, -6.47842, -0.273199, 12.5146 )
+transform = Transform( -0.996205, 0, -0.087034, 0, 0.712259, 0, 0.087034, 0, -0.996205, -15.1149, -0.273199, 20.7594 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.0775219, -0.552497, -0.829902, 0.000601604, -0.832381, 0.554204, 0.996991, 0.0434622, 0.0641953, -3.32257, 2.67908, -0.461731 )
@@ -249,7 +249,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.55542, 0, 10.0799 )
 transform = Transform( -0.0407422, 0, -0.99917, 0, 1, 0, 0.99917, 0, -0.0407422, -12.1294, -0.0595779, 17.4093 )
 
 [node name="bees" parent="city" instance=ExtResource( 14 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5324, 0, 23.5922 )
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -16.5324, 0.912225, 23.5922 )
 
 [node name="drLivsey" parent="city" instance=ExtResource( 17 )]
 transform = Transform( -0.164514, 0, -0.986375, 0, 1, 0, 0.986375, 0, -0.164514, -7.34983, 0, 31.2917 )
