@@ -15,6 +15,7 @@ onready var dialogue: Control = $Dialogue
 # var b = "text"
 var input_move: Vector3 = Vector3()
 var gravity_local: Vector3 = Vector3()
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -22,8 +23,9 @@ func _ready():
 func _input (event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg2rad(-1 * event.relative.x * MOUSE_SENSIVITY_Y))
-		look_pivot.rotate_x(deg2rad(event.relative.y) * MOUSE_SENSIVITY_X)
-		look_pivot.rotation.x = clamp(look_pivot.rotation.x, deg2rad (-90), deg2rad (90))
+		#look_pivot.rotate_x(deg2rad(-1 * event.relative.y) * MOUSE_SENSIVITY_X)
+		look_pivot.rotate_x(deg2rad(-1 * event.relative.y) * MOUSE_SENSIVITY_X)
+		#print(deg2rad(-1 * event.relative.y) * MOUSE_SENSIVITY_X)
 
 func _physics_process(delta):
 	input_move = get_input_direction() * MOVE_SPEED	
@@ -49,3 +51,6 @@ func get_input_direction() -> Vector3:
 	var z: float = Input.get_action_strength("back") - Input.get_action_strength("forward")
 	var x: float = Input.get_action_strength("right") - Input.get_action_strength("left")
 	return transform.basis.xform(Vector3(x, 0, z)).normalized()
+
+func on_Area_area_entered(area):
+	print ("ok")

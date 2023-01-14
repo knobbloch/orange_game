@@ -5,4 +5,4 @@
 [resource]
 albedo_color = Color( 0.67451, 0.6, 0.6, 1 )
 albedo_texture = ExtResource( 1 )
-uv1_scale = Vector3( 9, 9, 1 )
+uv1_scale = Vector3( 15, 15, 1 )
