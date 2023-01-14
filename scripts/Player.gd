@@ -21,7 +21,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _input (event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and not dialogue.is_dualogue_continue:
 		rotate_y(deg2rad(-1 * event.relative.x * MOUSE_SENSIVITY_Y))
 		#look_pivot.rotate_x(deg2rad(-1 * event.relative.y) * MOUSE_SENSIVITY_X)
 		look_pivot.rotate_x(deg2rad(-1 * event.relative.y) * MOUSE_SENSIVITY_X)
@@ -29,7 +29,7 @@ func _input (event):
 
 func _physics_process(delta):
 	input_move = get_input_direction() * MOVE_SPEED	
-	if not is_on_floor():
+	if not is_on_floor()  and not dialogue.is_dualogue_continue:
 		gravity_local += GRAVITY_ACCELERATION * Vector3.DOWN * delta
 	else:
 		gravity_local = GRAVITY_ACCELERATION * -get_floor_normal() * delta
@@ -48,8 +48,11 @@ func _physics_process(delta):
 	move_and_slide(input_move + gravity_local * MOVE_SPEED, Vector3.UP)
 	
 func get_input_direction() -> Vector3:
-	var z: float = Input.get_action_strength("back") - Input.get_action_strength("forward")
-	var x: float = Input.get_action_strength("right") - Input.get_action_strength("left")
+	var z: float = 0
+	var x: float = 0
+	if (not dialogue.is_dualogue_continue):
+		z = Input.get_action_strength("back") - Input.get_action_strength("forward")
+		x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	return transform.basis.xform(Vector3(x, 0, z)).normalized()
 
 func on_Area_area_entered(area):
