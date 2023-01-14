@@ -1,11 +1,10 @@
 [gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/new_spatialmaterial.tres" type="Material" id=2]
+[ext_resource path="res://assets/scene main/ground.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/stairs/Stairs_Side.material" type="Material" id=3]
 [ext_resource path="res://assets/stairs/Stairs_A.material" type="Material" id=4]
 [ext_resource path="res://scenes/grandpa.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/gigachad.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Door.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/math.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/wise tree.tscn" type="PackedScene" id=9]
@@ -33,6 +32,10 @@
 [ext_resource path="res://scripts/root.gd" type="Script" id=31]
 
 [sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_texture = ExtResource( 2 )
+uv1_scale = Vector3( 15, 15, 15 )
 
 [sub_resource type="ConcavePolygonShape" id=3]
 data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
@@ -102,7 +105,7 @@ transform = Transform( 0.0775219, -0.552497, -0.829902, 0.000601604, -0.832381, 
 transform = Transform( 12.0687, 0, 0, 0, 0.0272699, 0, 0, 0, 18.9381, -7.77944, 0.0238612, 17.0097 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 2 )
+material/0 = SubResource( 18 )
 
 [node name="StaticBody" type="StaticBody" parent="city/MeshInstance"]
 
@@ -435,9 +438,6 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape" type="CollisionShape" parent="gym/MeshInstance11/StaticBody"]
 shape = SubResource( 3 )
-
-[node name="gigachad" parent="gym" instance=ExtResource( 6 )]
-transform = Transform( 0.906109, 0, -0.423045, 0, 1, 0, 0.423045, 0, 0.906109, -2.14975, 0, -6.45344 )
 
 [node name="MeshInstance13" type="MeshInstance" parent="gym"]
 transform = Transform( 4.1447, 0, 0, 0, 0.0290689, 0, 0, 0, 3.11896, -4.746, 2.37898, -5.00981 )
