@@ -25,6 +25,7 @@ var INVENTORY  = {
 	'gems': 0,
 	'items': []
 }
+var wasInInventory = []
 
 # Called when the node enters the scene tree for the first time.
 
@@ -34,6 +35,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func isMoneyEnough(amount):
+	if (INVENTORY['gems'] < amount):
+		return false
+	return true
+
 func notEnoughInventorySpaceError():
 	print('not enough inventory space (max possible is 4)')
 
@@ -45,19 +52,27 @@ func isInInventory(item_name):
 		return true
 	return false
 
+func wasInInventory(item_name):
+	if (wasInInventory.find(item_name) == -1):
+		return false
+	return true
+
 func addMoneyToInventory():
 	INVENTORY['gems'] += 1
 	updateMoneyLabel()
 
 func removeMoneyFromInventory(amount):
-	INVENTORY['gems'] -= amount
-	if (INVENTORY['gems'] < 0):
+	if (INVENTORY['gems'] < amount):
 		notEnoughMoneyError()
-	updateMoneyLabel()
+	else:
+		INVENTORY['gems'] -= amount
+		updateMoneyLabel()
 
 
 func addItemToInventory(item_name):
 	INVENTORY['items'].append(item_name)
+	wasInInventory.append(item_name)
+	print(wasInInventory)
 	var item_texture = TEXTURES[item_name]
 	updateTextures()
 

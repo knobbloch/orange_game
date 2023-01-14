@@ -41,6 +41,7 @@ func playMusic(track_name):
 	current_track = GLOBAL.get_node('sfx/' + track_name)
 	current_track.play()
 	
-func stopMusic():
+func stopMusic(track_name):
+	current_track = GLOBAL.get_node('sfx/' + track_name)
 	current_track.stop()
 	
