@@ -49,3 +49,6 @@ func get_input_direction() -> Vector3:
 	var z: float = Input.get_action_strength("back") - Input.get_action_strength("forward")
 	var x: float = Input.get_action_strength("right") - Input.get_action_strength("left")
 	return transform.basis.xform(Vector3(x, 0, z)).normalized()
+
+func on_Area_area_entered(area):
+	print ("ok")
