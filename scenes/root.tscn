@@ -233,7 +233,7 @@ skeleton = NodePath("../..")
 shape = SubResource( 3 )
 
 [node name="wise tree" parent="city" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4066, 0, 1.51427 )
+transform = Transform( 0.850031, 0, -0.526733, 0, 1, 0, 0.526733, 0, 0.850031, -18.0003, 0.896096, 3.82685 )
 
 [node name="shlepa" parent="city" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.55542, 0, 10.0799 )
@@ -248,7 +248,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5324, 0, 23.5922 )
 transform = Transform( -0.164514, 0, -0.986375, 0, 1, 0, 0.986375, 0, -0.164514, -7.34983, 0, 31.2917 )
 
 [node name="crowd" parent="city" instance=ExtResource( 19 )]
-transform = Transform( -0.0643581, 0, -0.997927, 0, 1, 0, 0.997927, 0, -0.0643581, -2.83118, 0, 31.0161 )
+transform = Transform( -0.0413165, 0, -0.753665, 0, 0.754797, 0, 0.753665, 0, -0.0413165, -3.15488, 1.41512, 30.5398 )
 
 [node name="MeshInstance18" type="MeshInstance" parent="city"]
 transform = Transform( 10.627, 0, 0, 0, -1.27064e-09, 1.18115, 0, -0.0290689, -5.16297e-08, -6.50022, 1.18851, 33.0142 )
@@ -326,7 +326,7 @@ skeleton = NodePath("../../..")
 shape = SubResource( 3 )
 
 [node name="grandpa" parent="Grandpa house" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.14053, 0, 0 )
+transform = Transform( -1, 0, -0.000296744, 0, 1, 0, 0.000296744, 0, -1, 5.82933, 0.518496, -0.136648 )
 
 [node name="MeshInstance10" type="MeshInstance" parent="Grandpa house"]
 transform = Transform( 2.30268, 0, 0, 0, 0.0290689, 0, 0, 0, 2.66251, 4.604, 2.36407, -0.321 )
@@ -339,7 +339,7 @@ skeleton = NodePath("../..")
 shape = SubResource( 3 )
 
 [node name="TV" parent="Grandpa house" instance=ExtResource( 28 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36422, 0, -1.90607 )
+transform = Transform( -0.282784, 0, 0.100167, 0, 0.3, 0, -0.100167, 0, -0.282784, 3.09302, 0.264491, -2.45124 )
 
 [node name="gym" type="Room" parent="."]
 
@@ -437,7 +437,7 @@ skeleton = NodePath("../..")
 shape = SubResource( 3 )
 
 [node name="fancy_suit" parent="gym" instance=ExtResource( 30 )]
-transform = Transform( 0.00121877, 0, 0.0180221, 0, 0.520663, 0, -0.714928, 0, 0.0937608, -7.46711, 0, -5.16719 )
+transform = Transform( 0.000213076, 0.000578141, 0.124998, -9.83586e-07, 0.124999, -0.00057814, -0.125, 1.93052e-09, 0.000213079, -7.66544, 0.127597, -4.41845 )
 
 [node name="Door" parent="gym" instance=ExtResource( 7 )]
 transform = Transform( -1.44568, 0, -1.26385e-07, 0, 1.12816, 0, 8.74228e-08, 0, -1, -7.11759, 0.0624256, -8.1061 )
@@ -662,7 +662,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4634, 0, 5.44239 )
 transform = Transform( 0.638016, 0, 0, 0, 0.574508, 0, 0, 0, 1, -11.0431, 0.308071, 7.52972 )
 
 [node name="gem" parent="bank" instance=ExtResource( 23 )]
-transform = Transform( 0.515455, 0, 0, 0, 0.414192, 0, 0, 0, 1, -14.0991, 0, 6.87266 )
+transform = Transform( 0.515455, 0, 0, 0, 0.414192, 0, 0, 0, 1, -14.5607, 0.336349, 6.30813 )
 
 [node name="MeshInstance11" type="MeshInstance" parent="bank"]
 transform = Transform( 2.81354, 0, 0, 0, 0.0290689, 0, 0, 0, 3.085, -13.2394, 2.36794, 6.22065 )
@@ -856,7 +856,7 @@ shape = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.1349, 0, 29.615 )
 
 [node name="protein" parent="pharmacy" instance=ExtResource( 20 )]
-transform = Transform( 0.471342, 0, 0, 0, 0.547665, 0, 0, 0, 1, 6.52134, 0, 33.5742 )
+transform = Transform( 0.471342, 0, 0, 0, 0.547665, 0, 0, 0, 1, 6.7299, 0.120772, 33.2531 )
 
 [node name="MeshInstance18" type="MeshInstance" parent="pharmacy"]
 transform = Transform( 2.97057, 0, 0, 0, 0.0290689, 0, 0, 0, 3.65317, 7.10318, 2.36304, 31.126 )
@@ -915,7 +915,7 @@ material/0 = SubResource( 10 )
 shape = SubResource( 3 )
 
 [node name="ticket" parent="cave" instance=ExtResource( 22 )]
-transform = Transform( -2.31418e-07, 0, -7.13669, 0, 3.29115, 0, 5.25605, 0, -3.09705e-07, -24.8365, -9.65644, 49.8246 )
+transform = Transform( -2.31418e-07, 0, -7.13669, 0, 3.29115, 0, 5.25605, 0, -3.09705e-07, -24.8365, -8.18406, 49.8246 )
 
 [node name="math" parent="cave" instance=ExtResource( 8 )]
 transform = Transform( -3.11955e-07, 0, -7.13669, 0, 6.55888, 0, 7.08521, 0, -3.09704e-07, -33.1076, -11.7638, 49.4341 )
