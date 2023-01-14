@@ -7,7 +7,6 @@ func _ready():
 
 
 func interact(inventory, targets, dialogue):
-	inventory.addMoneyToInventory()
 	dialogue.SpeakerIs("Дед")
 	if(is_dualogue_continue==0):
 		dialogue.StartDialogue()
