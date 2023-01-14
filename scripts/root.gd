@@ -10,9 +10,7 @@ func default_music():
 	GLOBAL.playMusic("")
 
 func _on_Area_body_entered_gym(body):
-	if(body == player):
-		#GLOBAL.stopMusic()
-		GLOBAL.playMusic("boot")
+	pass
 
 func _on_Area_body_entered_grandpa_house(body):
 	if(body == player):
