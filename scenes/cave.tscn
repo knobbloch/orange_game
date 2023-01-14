@@ -426,6 +426,7 @@ shape = SubResource( 22 )
 [node name="StaticBody" type="StaticBody" parent="Sketchfab_model/130a23792b5c4fdc918d8ff424b96d8efbx/Object_2/RootNode/Cube070/Cube070_Material_0" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Sketchfab_model/130a23792b5c4fdc918d8ff424b96d8efbx/Object_2/RootNode/Cube070/Cube070_Material_0/StaticBody" index="0"]
+transform = Transform( 1, -1.19209e-07, -4.61936e-07, -4.65661e-10, 1, 0, 2.21189e-09, -7.45058e-09, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Sketchfab_model/130a23792b5c4fdc918d8ff424b96d8efbx/Object_2/RootNode/Cube071/Cube071_Material_0" index="0"]
