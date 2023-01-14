@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/GrayThing.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Dialogue.gd" type="Script" id=2]
 [ext_resource path="res://scripts/GrayThing.gd" type="Script" id=3]
+[ext_resource path="res://assets/dialogue/GrayThing.png" type="Texture" id=4]
 
 [sub_resource type="Theme" id=10]
 
@@ -28,7 +28,7 @@ visible = false
 show_behind_parent = true
 position = Vector2( 473, 516 )
 scale = Vector2( 1.24311, 0.147662 )
-texture = ExtResource( 1 )
+texture = ExtResource( 4 )
 script = ExtResource( 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -47,7 +47,7 @@ visible = false
 show_behind_parent = true
 position = Vector2( 152, 439 )
 scale = Vector2( 0.194296, 0.0270807 )
-texture = ExtResource( 1 )
+texture = ExtResource( 4 )
 script = ExtResource( 3 )
 
 [node name="PersonsName" type="RichTextLabel" parent="."]

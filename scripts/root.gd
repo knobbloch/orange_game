@@ -7,7 +7,7 @@ func _ready():
 
 func default_music():
 	#GLOBAL.stopMusic()
-	GLOBAL.playMusic("fon")
+	GLOBAL.playMusic("")
 
 func _on_Area_body_entered_gym(body):
 	pass
@@ -15,7 +15,7 @@ func _on_Area_body_entered_gym(body):
 func _on_Area_body_entered_grandpa_house(body):
 	if(body == player):
 		#GLOBAL.stopMusic()
-		GLOBAL.playMusic("walking")
+		GLOBAL.playMusic("boot")
 
 func _on_Area_body_exited_grandpa_house(body):
 	pass
