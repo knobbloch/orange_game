@@ -5,12 +5,12 @@ onready var getSpirtTaskIndicator = $TextureRect2
 onready var getKrotTaskIndicator = $TextureRect3
 
 
-var uncompletedJarTaskTexture = 'res://assets/jarUncomplited.png'
-var uncompletedSpirtTaskTexture = 'res://assets/SpirtUncomplited.png'
-var uncompletedKrotTaskTexture = 'res://assets/krotUncomplited.png'
-var completedJarTaskTexture = 'res://assets/jarComplited.png'
-var completedSpirtTaskTexture = 'res://assets/spirtComplited.png'
-var completedKrotTaskTexture = 'res://assets/krotComplited.png'
+var uncompletedJarTaskTexture = 'res://assets/targets/jarUncomplited.png'
+var uncompletedSpirtTaskTexture = 'res://assets/targets/SpirtUncomplited.png'
+var uncompletedKrotTaskTexture = 'res://assets/targets/krotUncomplited.png'
+var completedJarTaskTexture = 'res://assets/targets/jarComplited.png'
+var completedSpirtTaskTexture = 'res://assets/targets/spirtComplited.png'
+var completedKrotTaskTexture = 'res://assets/targets/krotComplited.png'
 
 
 func _ready():

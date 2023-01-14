@@ -90,7 +90,7 @@ func updateTextures():
 		if (INVENTORY['items'].size() > cellIndex):
 			var item_name = INVENTORY['items'][cellIndex]
 			var item_texture = TEXTURES[item_name]
-			inventCells[cellIndex].set_texture(load('res://assets/' + item_texture))
+			inventCells[cellIndex].set_texture(load('res://assets/inventory/' + item_texture))
 		else:
 			inventCells[cellIndex].set_texture(null)
 
