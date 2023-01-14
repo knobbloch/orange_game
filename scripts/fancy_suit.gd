@@ -10,7 +10,9 @@ extends StaticBody
 func _ready():
 	pass # Replace with function body.
 
-
+func interact(inventory, targets, dialogue):
+	inventory.addItemToInventory('fancy_suit')
+	get_parent().queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

@@ -8,7 +8,7 @@ func _ready():
 
 
 func interact(inventory, targets, dialogue):
-	get_tree().change_scene("res://scenes/ClsCutScene.tscn")
+	#get_tree().change_scene("res://scenes/ClsCutScene.tscn")
 	inventory.addMoneyToInventory()
 	dialogue.SpeakerIs("Дед")
 	if(!is_dualogue_continue):
