@@ -1,4 +1,4 @@
-extends StaticBody
+extends Spatial
 
 var is_dualogue_continue = false
 var isItemReceived = false

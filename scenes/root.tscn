@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/new_spatialmaterial.tres" type="Material" id=2]
@@ -30,11 +30,16 @@
 [ext_resource path="res://scenes/TV.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/fountain.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/fancy_suit.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scripts/root.gd" type="Script" id=31]
 
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="ConcavePolygonShape" id=3]
 data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="BoxShape" id=11]
+
+[sub_resource type="BoxShape" id=12]
 
 [sub_resource type="ArrayMesh" id=4]
 resource_name = "Sketchfab_Scene_Stairs A005_Stairs A_0"
@@ -72,19 +77,21 @@ surfaces/0 = {
 [sub_resource type="ConcavePolygonShape" id=7]
 data = PoolVector3Array( -0.14, 0.736, -1.2, -0.14, 1.2, 0.96, -0.14, 0.736, 0.96, -0.14, 0.736, -1.2, -0.14, 1.2, -1.2, -0.14, 1.2, 0.96, -0.14, 1.2, -1.2, 0.14, 1.2, 0.96, -0.14, 1.2, 0.96, -0.14, 1.2, -1.2, 0.14, 1.2, -1.2, 0.14, 1.2, 0.96, 0.14, -0.76, -1.2, 0.14, -1.2, -0.8, 0.14, -0.76, -0.4, 0.14, -0.76, -1.2, 0.14, -1.2, -1.2, 0.14, -1.2, -0.8, 0.14, -1.2, -1.2, -0.14, -1.2, -0.8, 0.14, -1.2, -0.8, 0.14, -1.2, -1.2, -0.14, -1.2, -1.2, -0.14, -1.2, -0.8, 0.14, 1.2, -1.2, 0.14, 0.736, 0.96, 0.14, 1.2, 0.96, 0.14, 1.2, -1.2, 0.14, 0.736, -1.2, 0.14, 0.736, 0.96, -0.14, 0.56, -1.2, -0.14, 0.736, 0.96, -0.14, 0.56, 0.8, -0.14, 0.56, -1.2, -0.14, 0.736, -1.2, -0.14, 0.736, 0.96, -0.14, -1.2, -1.2, -0.14, -0.76, -0.4, -0.14, -1.2, -0.8, -0.14, -1.2, -1.2, -0.14, -0.76, -1.2, -0.14, -0.76, -0.4, -0.14, -0.76, -1.2, -0.14, -0.32, 0, -0.14, -0.76, -0.4, -0.14, -0.76, -1.2, -0.14, -0.32, -1.2, -0.14, -0.32, 0, -0.14, -0.32, -1.2, -0.14, 0.12, 0.4, -0.14, -0.32, 0, -0.14, -0.32, -1.2, -0.14, 0.12, -1.2, -0.14, 0.12, 0.4, -0.14, 0.12, -1.2, -0.14, 0.56, 0.8, -0.14, 0.12, 0.4, -0.14, 0.12, -1.2, -0.14, 0.56, -1.2, -0.14, 0.56, 0.8, 0.14, 0.736, 0.96, -0.14, 0.56, 0.8, -0.14, 0.736, 0.96, 0.14, 0.736, 0.96, 0.14, 0.56, 0.8, -0.14, 0.56, 0.8, 0.14, 0.56, 0.8, -0.14, 0.12, 0.4, -0.14, 0.56, 0.8, 0.14, 0.56, 0.8, 0.14, 0.12, 0.4, -0.14, 0.12, 0.4, 0.14, -0.32, 0, -0.14, -0.76, -0.4, -0.14, -0.32, 0, 0.14, -0.32, 0, 0.14, -0.76, -0.4, -0.14, -0.76, -0.4, 0.14, 0.736, -1.2, 0.14, 0.56, 0.8, 0.14, 0.736, 0.96, 0.14, 0.736, -1.2, 0.14, 0.56, -1.2, 0.14, 0.56, 0.8, 0.14, 0.56, -1.2, 0.14, 0.12, 0.4, 0.14, 0.56, 0.8, 0.14, 0.56, -1.2, 0.14, 0.12, -1.2, 0.14, 0.12, 0.4, 0.14, 0.12, -1.2, 0.14, -0.32, 0, 0.14, 0.12, 0.4, 0.14, 0.12, -1.2, 0.14, -0.32, -1.2, 0.14, -0.32, 0, 0.14, -0.32, -1.2, 0.14, -0.76, -0.4, 0.14, -0.32, 0, 0.14, -0.32, -1.2, 0.14, -0.76, -1.2, 0.14, -0.76, -0.4, -0.14, -1.2, -0.8, 0.14, -1.2, -0.1596, 0.14, -1.2, -0.8, -0.14, -1.2, -0.8, -0.14, -1.2, -0.1596, 0.14, -1.2, -0.1596, 0.14, -0.76, -0.4, -0.14, -0.76, -0.1139, -0.14, -0.76, -0.4, 0.14, -0.76, -0.4, 0.14, -0.76, -0.1139, -0.14, -0.76, -0.1139, -0.14, -0.32, 0, 0.14, -0.32, 0.435, 0.14, -0.32, 0, -0.14, -0.32, 0, -0.14, -0.32, 0.435, 0.14, -0.32, 0.435, 0.14, 0.12, 0.4, -0.14, 0.12, 0.481, -0.14, 0.12, 0.4, 0.14, 0.12, 0.4, 0.14, 0.12, 0.481, -0.14, 0.12, 0.481, -0.14, 0.736, 0.96, 0.14, 0.736, 1.1569, 0.14, 0.736, 0.96, -0.14, 0.736, 0.96, -0.14, 0.736, 1.1569, 0.14, 0.736, 1.1569, 0.14, -1.1489, -0.1, -0.14, -1.2, -0.1596, -0.14, -1.1489, -0.1, 0.14, -1.1489, -0.1, 0.14, -1.2, -0.1596, -0.14, -1.2, -0.1596, -0.14, -0.32, 0.435, 0.14, -0.2643, 0.5, 0.14, -0.32, 0.435, -0.14, -0.32, 0.435, -0.14, -0.2643, 0.5, 0.14, -0.2643, 0.5, -0.14, 0.736, 1.1569, 0.14, 0.773, 1.2, 0.14, 0.736, 1.1569, -0.14, 0.736, 1.1569, -0.14, 0.773, 1.2, 0.14, 0.773, 1.2, 0.14, 1.1817, 1.2, -0.14, 0.773, 1.2, -0.14, 1.1817, 1.2, 0.14, 1.1817, 1.2, 0.14, 0.773, 1.2, -0.14, 0.773, 1.2, -0.14, 1.1817, 1.2, 0.14, 1.2, 1.1787, 0.14, 1.1817, 1.2, -0.14, 1.1817, 1.2, -0.14, 1.2, 1.1787, 0.14, 1.2, 1.1787, 0.14, 1.2, 0.96, -0.14, 1.2, 1.1787, -0.14, 1.2, 0.96, 0.14, 1.2, 0.96, 0.14, 1.2, 1.1787, -0.14, 1.2, 1.1787, -0.14, 0.1037, 0.5, 0.14, 0.12, 0.481, 0.14, 0.1037, 0.5, -0.14, 0.1037, 0.5, -0.14, 0.12, 0.481, 0.14, 0.12, 0.481, 0.14, 0.1037, 0.5, -0.14, -0.2643, 0.5, -0.14, 0.1037, 0.5, 0.14, 0.1037, 0.5, 0.14, -0.2643, 0.5, -0.14, -0.2643, 0.5, -0.14, -0.7719, -0.1, 0.14, -0.76, -0.1139, 0.14, -0.7719, -0.1, -0.14, -0.7719, -0.1, -0.14, -0.76, -0.1139, 0.14, -0.76, -0.1139, 0.14, -0.7719, -0.1, -0.14, -1.1489, -0.1, -0.14, -0.7719, -0.1, 0.14, -0.7719, -0.1, 0.14, -1.1489, -0.1, -0.14, -1.1489, -0.1, 0.14, -0.76, -0.4, 0.14, -1.2, -0.8, 0.14, -1.2, -0.1596, 0.14, -1.2, -0.1596, 0.14, -1.1489, -0.1, 0.14, -0.76, -0.4, 0.14, -1.1489, -0.1, 0.14, -0.7719, -0.1, 0.14, -0.76, -0.4, 0.14, -0.7719, -0.1, 0.14, -0.76, -0.1139, 0.14, -0.76, -0.4, 0.14, 0.12, 0.4, 0.14, -0.32, 0, 0.14, -0.32, 0.435, 0.14, -0.32, 0.435, 0.14, -0.2643, 0.5, 0.14, 0.12, 0.4, 0.14, -0.2643, 0.5, 0.14, 0.1037, 0.5, 0.14, 0.12, 0.4, 0.14, 0.1037, 0.5, 0.14, 0.12, 0.481, 0.14, 0.12, 0.4, 0.14, 1.2, 0.96, 0.14, 0.736, 0.96, 0.14, 0.736, 1.1569, 0.14, 0.736, 1.1569, 0.14, 0.773, 1.2, 0.14, 1.2, 0.96, 0.14, 0.773, 1.2, 0.14, 1.1817, 1.2, 0.14, 1.2, 0.96, 0.14, 1.1817, 1.2, 0.14, 1.2, 1.1787, 0.14, 1.2, 0.96, -0.14, 0.773, 1.2, -0.14, 0.736, 1.1569, -0.14, 0.736, 0.96, -0.14, 0.736, 0.96, -0.14, 1.2, 0.96, -0.14, 0.773, 1.2, -0.14, 1.2, 0.96, -0.14, 1.1817, 1.2, -0.14, 0.773, 1.2, -0.14, 1.2, 0.96, -0.14, 1.2, 1.1787, -0.14, 1.1817, 1.2, -0.14, -1.2, -0.1596, -0.14, -1.2, -0.8, -0.14, -0.76, -0.4, -0.14, -0.76, -0.4, -0.14, -1.1489, -0.1, -0.14, -1.2, -0.1596, -0.14, -0.76, -0.4, -0.14, -0.7719, -0.1, -0.14, -1.1489, -0.1, -0.14, -0.76, -0.4, -0.14, -0.76, -0.1139, -0.14, -0.7719, -0.1, -0.14, -0.2643, 0.5, -0.14, -0.32, 0.435, -0.14, -0.32, 0, -0.14, -0.32, 0, -0.14, 0.12, 0.4, -0.14, -0.2643, 0.5, -0.14, 0.12, 0.4, -0.14, 0.1037, 0.5, -0.14, -0.2643, 0.5, -0.14, 0.12, 0.4, -0.14, 0.12, 0.481, -0.14, 0.1037, 0.5 )
 
-[sub_resource type="SpatialMaterial" id=8]
-albedo_color = Color( 0.215686, 0.207843, 0.207843, 1 )
+[sub_resource type="BoxShape" id=13]
 
-[sub_resource type="SpatialMaterial" id=9]
-albedo_color = Color( 0.215686, 0.207843, 0.207843, 1 )
+[sub_resource type="BoxShape" id=14]
 
-[sub_resource type="SpatialMaterial" id=10]
-albedo_color = Color( 0.215686, 0.207843, 0.207843, 1 )
+[sub_resource type="BoxShape" id=15]
+
+[sub_resource type="BoxShape" id=16]
+
+[sub_resource type="BoxShape" id=17]
 
 [node name="root" type="Spatial"]
+script = ExtResource( 31 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.996205, 0, -0.087034, 0, 0.712259, 0, 0.087034, 0, -0.996205, -6.8051, -3.44434, -22.8626 )
+transform = Transform( -0.996205, 0, -0.087034, 0, 0.712259, 0, 0.087034, 0, -0.996205, -6.47842, -0.273199, 12.5146 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.0775219, -0.552497, -0.829902, 0.000601604, -0.832381, 0.554204, 0.996991, 0.0434622, 0.0641953, -3.32257, 2.67908, -0.461731 )
@@ -341,6 +348,12 @@ shape = SubResource( 3 )
 [node name="TV" parent="Grandpa house" instance=ExtResource( 28 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36422, 0, -1.90607 )
 
+[node name="Area" type="Area" parent="Grandpa house"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37215, 1.7831, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Grandpa house/Area"]
+shape = SubResource( 11 )
+
 [node name="gym" type="Room" parent="."]
 
 [node name="MeshInstance5" type="MeshInstance" parent="gym"]
@@ -441,6 +454,12 @@ transform = Transform( 0.00121877, 0, 0.0180221, 0, 0.520663, 0, -0.714928, 0, 0
 
 [node name="Door" parent="gym" instance=ExtResource( 7 )]
 transform = Transform( -1.44568, 0, -1.26385e-07, 0, 1.12816, 0, 8.74228e-08, 0, -1, -7.11759, 0.0624256, -8.1061 )
+
+[node name="Area" type="Area" parent="gym"]
+transform = Transform( 4.05048, 0, 0, 0, 1.74514, 0, 0, 0, 3.18622, -4.69687, 0.651741, -5.10679 )
+
+[node name="CollisionShape" type="CollisionShape" parent="gym/Area"]
+shape = SubResource( 12 )
 
 [node name="dungeon" type="Room" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0245628 )
@@ -603,6 +622,12 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance17/StaticBody"]
 shape = SubResource( 3 )
 
+[node name="Area" type="Area" parent="dungeon"]
+transform = Transform( 5.1139, 0, 0, 0, 2.16932, 0, 0, 0, 4.22799, -13.8446, -2.70248, -20.9161 )
+
+[node name="CollisionShape" type="CollisionShape" parent="dungeon/Area"]
+shape = SubResource( 13 )
+
 [node name="bank" type="Room" parent="."]
 
 [node name="MeshInstance6" type="MeshInstance" parent="bank"]
@@ -674,6 +699,11 @@ skeleton = NodePath("../..")
 [node name="CollisionShape" type="CollisionShape" parent="bank/MeshInstance11/StaticBody"]
 shape = SubResource( 3 )
 
+[node name="Area" type="Area" parent="bank"]
+transform = Transform( 17.0128, 0, 0, 0, 11.4211, 0, 0, 0, 21.171, -12.5887, 0, 4.98597 )
+
+[node name="CollisionShape" type="CollisionShape" parent="bank/Area"]
+
 [node name="cinema" type="Room" parent="."]
 
 [node name="MeshInstance10" type="MeshInstance" parent="cinema"]
@@ -742,6 +772,12 @@ shape = SubResource( 3 )
 [node name="bigScreen" parent="cinema" instance=ExtResource( 26 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63254, 0, 20.9547 )
 
+[node name="Area" type="Area" parent="cinema"]
+transform = Transform( 3.49943, 0, 0, 0, 1.07416, 0, 0, 0, 5.19791, 1.23068, 1.05884, 17.0133 )
+
+[node name="CollisionShape" type="CollisionShape" parent="cinema/Area"]
+shape = SubResource( 14 )
+
 [node name="market" type="Room" parent="."]
 
 [node name="MeshInstance13" type="MeshInstance" parent="market"]
@@ -799,6 +835,12 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape" type="CollisionShape" parent="market/MeshInstance20/StaticBody"]
 shape = SubResource( 3 )
+
+[node name="Area" type="Area" parent="market"]
+transform = Transform( 4.0744, 0, 0, 0, 1.46062, 0, 0, 0, 4.55372, -12.3709, 0.926745, 29.044 )
+
+[node name="CollisionShape" type="CollisionShape" parent="market/Area"]
+shape = SubResource( 15 )
 
 [node name="pharmacy" type="Room" parent="."]
 
@@ -878,47 +920,41 @@ skeleton = NodePath("../..")
 [node name="CollisionShape" type="CollisionShape" parent="pharmacy/MeshInstance15/StaticBody"]
 shape = SubResource( 3 )
 
+[node name="Area" type="Area" parent="pharmacy"]
+transform = Transform( 2.77094, 0, 0, 0, 1.0932, 0, 0, 0, 3.67062, 6.89126, 1.23916, 31.1439 )
+
+[node name="CollisionShape" type="CollisionShape" parent="pharmacy/Area"]
+shape = SubResource( 16 )
+
 [node name="cave" parent="." instance=ExtResource( 25 )]
-transform = Transform( -6.12487e-09, 0, 0.141139, 0, 0.152465, 0, -0.140121, 0, -6.1694e-09, -50.063, -2.7221, -30.5376 )
-
-[node name="MeshInstance10" type="MeshInstance" parent="cave"]
-transform = Transform( 2.07874, -0.0279938, 4.01116e-08, -1.03873e-06, 2.80509e-16, 10.4902, -9.40986, -0.00991985, -1.81574e-07, 16.9269, -7.59982, 134.035 )
-mesh = SubResource( 1 )
-skeleton = NodePath("../../..")
-material/0 = SubResource( 8 )
-
-[node name="StaticBody" type="StaticBody" parent="cave/MeshInstance10"]
-
-[node name="CollisionShape" type="CollisionShape" parent="cave/MeshInstance10/StaticBody"]
-shape = SubResource( 3 )
-
-[node name="MeshInstance11" type="MeshInstance" parent="cave"]
-transform = Transform( 2.12556, -0.0262712, -4.66606e-08, 0, -8.17426e-09, 7.59856, -9.50819, -0.0244668, -4.34557e-08, -47.2609, -6.96992, 28.7438 )
-mesh = SubResource( 1 )
-skeleton = NodePath("../../..")
-material/0 = SubResource( 9 )
-
-[node name="StaticBody" type="StaticBody" parent="cave/MeshInstance11"]
-
-[node name="CollisionShape" type="CollisionShape" parent="cave/MeshInstance11/StaticBody"]
-shape = SubResource( 3 )
-
-[node name="MeshInstance12" type="MeshInstance" parent="cave"]
-transform = Transform( 10.6652, -1.6212e-09, -2.87944e-15, 0, -8.74767e-09, 8.13158, 2.58642e-07, -0.0290689, -5.16296e-08, 10.4834, -5.6377, 8.62259 )
-mesh = SubResource( 1 )
-skeleton = NodePath("../../..")
-material/0 = SubResource( 10 )
-
-[node name="StaticBody" type="StaticBody" parent="cave/MeshInstance12"]
-
-[node name="CollisionShape" type="CollisionShape" parent="cave/MeshInstance12/StaticBody"]
-shape = SubResource( 3 )
+transform = Transform( 0.0252175, 0, 0.138834, 0, 0.152465, 0, -0.137833, 0, 0.0254008, -39.9948, -1.47579, -36.1782 )
 
 [node name="ticket" parent="cave" instance=ExtResource( 22 )]
-transform = Transform( -2.31418e-07, 0, -7.13669, 0, 3.29115, 0, 5.25605, 0, -3.09705e-07, -24.8365, -9.65644, 49.8246 )
+transform = Transform( -5.36442e-07, 0, -7.13671, 0, 3.29116, 0, 5.25606, 0, 3.57628e-07, -46.9538, -17.6592, -25.776 )
 
 [node name="math" parent="cave" instance=ExtResource( 8 )]
-transform = Transform( -3.11955e-07, 0, -7.13669, 0, 6.55888, 0, 7.08521, 0, -3.09704e-07, -33.1076, -11.7638, 49.4341 )
+transform = Transform( -0.246611, 0, -7.09159, 0, 4.2822, 0, 5.74703, 0, 0.244831, -51.3537, -16.4268, -14.8383 )
 
 [node name="krot" parent="cave" instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, 3.55271e-14, 0, 1, 11.2791, -9.42388, 11.4096 )
+transform = Transform( 1, 0, -5.96046e-08, 0, 1, 0, -4.47035e-08, 0, 1, -3.87836, -16.383, -48.3462 )
+
+[node name="Area" type="Area" parent="cave"]
+transform = Transform( 93.985, 0, -1.25055e-06, 0, 22.5628, 0, -1.23252e-06, 0, 122.388, 0, 0, 99.4336 )
+
+[node name="CollisionShape" type="CollisionShape" parent="cave/Area"]
+shape = SubResource( 17 )
+
+[connection signal="body_entered" from="Grandpa house/Area" to="." method="_on_Area_body_entered_grandpa_house"]
+[connection signal="body_exited" from="Grandpa house/Area" to="." method="_on_Area_body_exited_grandpa_house"]
+[connection signal="body_entered" from="gym/Area" to="." method="_on_Area_body_entered_gym"]
+[connection signal="body_exited" from="gym/Area" to="." method="_on_Area_body_exited_gym"]
+[connection signal="mouse_entered" from="dungeon/Area" to="." method="_on_Area_mouse_entered_dungeon"]
+[connection signal="mouse_exited" from="dungeon/Area" to="." method="_on_Area_mouse_exited_dungeon"]
+[connection signal="body_entered" from="cinema/Area" to="." method="_on_Area_body_entered_cinema"]
+[connection signal="body_exited" from="cinema/Area" to="." method="_on_Area_body_exited_cinema"]
+[connection signal="body_entered" from="market/Area" to="." method="_on_Area_body_entered_market"]
+[connection signal="mouse_exited" from="market/Area" to="." method="_on_Area_mouse_exited_market"]
+[connection signal="mouse_entered" from="pharmacy/Area" to="." method="_on_Area_mouse_entered_pharmacy"]
+[connection signal="mouse_exited" from="pharmacy/Area" to="." method="_on_Area_mouse_exited_pharmacy"]
+[connection signal="mouse_entered" from="cave/Area" to="." method="_on_Area_mouse_entered_cave"]
+[connection signal="mouse_exited" from="cave/Area" to="." method="_on_Area_mouse_exited_cave"]
