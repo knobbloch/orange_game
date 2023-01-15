@@ -1,9 +1,7 @@
 extends Spatial
 
 onready var player = self.get_parent().get_parent().get_node("Player")
-onready var dialogues = player.get_node("Dialogue")
-onready var inventory = player.get_node("Inventory")
-var text1 = "А вот cum в банке отдай мне, с этим в dungeon нельзя"
+#onready var dialogues = player.dia
 
 func _ready():
 	pass
@@ -16,10 +14,7 @@ func _ready():
 func _on_Area2_body_entered(body):
 	if (body == player):
 		print("fd")
-		dialogues.StartDialogue()
-		dialogues.ChangeTextTo(text1)
-		dialogues.SpeakerIs("GIGACHAD")
-		
+		pass
 	pass
 
 func _on_Area2_body_exited(body):

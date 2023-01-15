@@ -12,6 +12,7 @@ func _ready():
 
 func interact(inventory, targets, dialogue):
 	inventory.addItemToInventory("empty_jar")
+	targets.setJarTaskCompleted()
 	get_parent().queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
