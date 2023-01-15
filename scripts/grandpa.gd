@@ -12,6 +12,7 @@ func interact(inventory, targets, dialogue):
 	if(!is_dualogue_continue):
 		dialogue.StartDialogue()
 		is_dualogue_continue=true
+		dialogue.is_dualogue_continue=true
 		dialogue.ChangeTextTo("Хррррр… Хррр…. Хр")
 		if (inventory.isInInventory('krotovuha')):
 			pass
