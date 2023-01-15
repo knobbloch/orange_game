@@ -3,6 +3,8 @@ var MainText
 var file = File.new()
 
 func _ready():
+	GLOBAL.stopMusic("default")
+	GLOBAL.playMusic("dedDie")
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	file.open("res://assets/cut scenes/Text_fore_the_cut_scenes2.txt", File.READ)
 	MainText=OpenTxtFile()
@@ -23,7 +25,7 @@ func _process(delta):
 		if nomber==21:
 			$DialogeBack.visible=!$DialogeBack.visible
 		MainText=OpenTxtFile()
-	#if nomber==22:
-		#GLOBAL.nextScene("")
+	if nomber==22:
+		GLOBAL.nextScene("start menu")
 	$Dogecoin.texture = load("res://assets/cut scenes/"+String(nomber)+".png")
 	$RichTextLabel.text= MainText
