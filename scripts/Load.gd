@@ -3,25 +3,16 @@ extends Node
 onready var loading_scene = preload("res://scenes/Load.tscn")
 
 func load_scene(current_scene, next_scene):
-	# add loading scene to the root
 	var loading_scene_instance = loading_scene.instance()
 	get_tree().get_root().call_deferred("add_child",loading_scene_instance)
-	
-	# find the targeted scene
 	var loader = ResourceLoader.load_interactive(next_scene)
-	
-	#check for errors
 	if loader == null:
-		# handle your error
 		print("error occured while getting the scene")
 		return
 
 	current_scene.queue_free()
-	# creating a little delay, that lets the loading screen to appear.
 	yield(get_tree().create_timer(0.5),"timeout")
 
-	# loading the next_scene using poll() function
-	# since poll() function loads data in chunks thus we need to put that in loop
 	while true:
 		var error = loader.poll()
 		# when we get a chunk of data
@@ -42,6 +33,5 @@ func load_scene(current_scene, next_scene):
 			# handle your error
 			print('error occurred while loading chunks of data')
 			return
-		
 		
 		yield(get_tree().create_timer(0),"timeout")

@@ -1,10 +1,4 @@
-extends StaticBody
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+tool extends StaticBody
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +6,6 @@ func _ready():
 
 func interact(inventory, targets, dialogue):
 	if GLOBAL.isJarPutted:
+		#ResourceSaver.save("res://path/name.scn", )
+		#get_tree().change_scene_to("")
 		GLOBAL.nextScene('ClsCutScene')
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

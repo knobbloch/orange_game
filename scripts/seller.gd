@@ -1,20 +1,20 @@
 extends StaticBody
 
-var is_dualogue_continue = false
-
 func _ready():
 	pass
 
 func say(dialogue, text):
 	dialogue.SpeakerIs("Продавец")
-	if(!is_dualogue_continue):
+	if(!dialogue.is_dualogue_continue):
 		dialogue.StartDialogue()
-		is_dualogue_continue=true
+		dialogue.is_dualogue_continue=true
+		dialogue.object = self
 		dialogue.ChangeTextTo(text)
 		
 	else:
 		dialogue.CloseDialogue()
-		is_dualogue_continue=false
+		dialogue.is_dualogue_continue=false
+		dialogue.object = null
 		
 
 func interact(inventory, targets, dialogue):
