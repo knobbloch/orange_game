@@ -1,23 +1,18 @@
 extends StaticBody
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var is_dualogue_continue = false
 var isGone = false
-
-
 
 func say(dialogue, inventory, text):
 	dialogue.SpeakerIs("Охранник")
-	if(!is_dualogue_continue):
+	if(!dialogue.is_dualogue_continue):
 		dialogue.StartDialogue()
-		is_dualogue_continue=true
+		dialogue.is_dualogue_continue=true
+		dialogue.object = self
 		dialogue.ChangeTextTo(text)
 	else:
 		dialogue.CloseDialogue()
-		is_dualogue_continue=false
+		dialogue.is_dualogue_continue=false
+		dialogue.object = null
 		if (inventory.isInInventory('fancy_suit') && !isGone):
 			get_parent().get_node("AnimationPlayer").play('moveSecurity')
 			isGone = true
@@ -28,7 +23,7 @@ func say(dialogue, inventory, text):
 
 
 func interact(inventory, targets, dialogue):
-	if (inventory.isInInventory('fancy_suit') && !isGone && !is_dualogue_continue):
+	if (inventory.isInInventory('fancy_suit') && !isGone && !dialogue.is_dualogue_continue):
 		say(dialogue, inventory, 'Ого! ничего себе, спасибо за fancy suit, теперь я могу пойти в клуб')
 	else:
 		if (!isGone):

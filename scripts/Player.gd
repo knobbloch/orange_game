@@ -49,6 +49,10 @@ func _physics_process(delta):
 			print(x.get_name())
 			if x.has_method("interact"):
 				x.interact(inventory, targets, dialogue)
+			elif (dialogue.is_dualogue_continue):
+				dialogue.object.interact(inventory, targets, dialogue)
+		elif (dialogue.is_dualogue_continue):
+			dialogue.object.interact(inventory, targets, dialogue)
 	move_and_slide(input_move + gravity_local * MOVE_SPEED, Vector3.UP)
 	
 func get_input_direction() -> Vector3:

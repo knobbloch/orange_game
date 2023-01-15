@@ -1,9 +1,5 @@
 extends Node
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var scenes = ['root', '2D']
 var currrent_scene = 0
 var file_path = ''
@@ -16,8 +12,6 @@ func _ready():
 	pass # Replace with function body.
 
 func nextScene(scene_name: String = ""):
-	# обращаться с помощью GLOBAL.nexrScene('имя сцены')
-	
 	if (scene_name == '' || scene_name == 'next'):
 		if !(currrent_scene < scenes.size()):
 			return false

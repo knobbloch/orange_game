@@ -3,12 +3,13 @@ extends Control
 var is_dualogue_continue
 var MainText="Text"
 var Speaker="Text"
+var object
 
 func _ready():
  is_dualogue_continue = false
+ object = null
  $RichTextLabel.hide()
  $GrayThing.hide()
- pass
 
 func SpeakerIs(SPText):
 	$PersonsName.text=SPText
