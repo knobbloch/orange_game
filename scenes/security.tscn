@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Rayne/Material_001.material" type="Material" id=1]
 [ext_resource path="res://assets/Rayne/Material.material" type="Material" id=2]
+[ext_resource path="res://scripts/security.gd" type="Script" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Rayan1_Cube"
@@ -33,6 +34,36 @@ surfaces/1 = {
 [sub_resource type="ConcavePolygonShape" id=2]
 data = PoolVector3Array( 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1 )
 
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cube:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "moveSecurity"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cube:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 1, 0, 0 ), Vector3( 1, 0, 4 ) ]
+}
+
 [node name="security" type="Spatial"]
 
 [node name="Cube" type="MeshInstance" parent="."]
@@ -40,6 +71,12 @@ transform = Transform( 0.0542365, 0, 0, 0, 4.19153, 0, 0, 0, 2.37874, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube"]
+script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Cube/StaticBody"]
 shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cube"]
+root_node = NodePath("../..")
+anims/RESET = SubResource( 3 )
+anims/moveSecurity = SubResource( 4 )

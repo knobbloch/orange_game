@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/Riot/Material_003.material" type="Material" id=1]
 [ext_resource path="res://assets/Riot/Material_006.material" type="Material" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/Riot/Material_002.material" type="Material" id=4]
 [ext_resource path="res://assets/Riot/Material_005.material" type="Material" id=5]
 [ext_resource path="res://assets/Riot/Material_004.material" type="Material" id=6]
+[ext_resource path="res://scripts/crowd.gd" type="Script" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Riot_Mesh"
@@ -131,89 +132,146 @@ surfaces/0 = {
 "vertex_count": 24
 }
 
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "crowdGone"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, -7, 0 ) ]
+}
+
 [node name="crowd" type="Spatial"]
 
-[node name="man001" type="MeshInstance" parent="."]
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="man001" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.350573, 0, 0, 0, 0.350573, 0, 0, 0, 0.350573, 3.14305, 0.225629, 0.0448673 )
 mesh = SubResource( 1 )
+skeleton = NodePath("../..")
 
-[node name="StaticBody" type="StaticBody" parent="man001"]
+[node name="StaticBody" type="StaticBody" parent="StaticBody/man001"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script = ExtResource( 7 )
 
-[node name="CollisionShape2" type="CollisionShape" parent="man001/StaticBody"]
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody/man001/StaticBody"]
 transform = Transform( 6.05544, 0, 0, 0, 5.60867, 2.12526e-08, 0, -2.12526e-08, 4.69339, -4.75723, -0.6317, 1.1272 )
 shape = SubResource( 9 )
 
-[node name="CollisionShape" type="CollisionShape" parent="man001/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody/man001/StaticBody"]
 shape = SubResource( 10 )
 
-[node name="sign" type="MeshInstance" parent="."]
+[node name="sign" type="MeshInstance" parent="StaticBody"]
 transform = Transform( -0.0267957, 0, 0, 0, 0.334389, 0.0276278, 0, -0.0165982, 0.556593, 3.13269, 0.984101, -0.99349 )
 mesh = SubResource( 2 )
+skeleton = NodePath("../..")
 
-[node name="stick" type="MeshInstance" parent="."]
+[node name="stick" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.0206691, 0, 0, 0, -0.458329, 0.00246484, 0, 0.0227503, 0.0496569, 3.13358, 0.23686, -0.956399 )
 mesh = SubResource( 3 )
+skeleton = NodePath("../..")
 
-[node name="man" type="MeshInstance" parent="."]
+[node name="man" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.290212, 0, 0, 0, 0.290212, 0, 0, 0, 0.290212, 1.5839, 0.118708, 0.468987 )
 mesh = SubResource( 4 )
+skeleton = NodePath("../..")
 
-[node name="Cube" type="MeshInstance" parent="."]
+[node name="Cube" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.0285356, 0, 0, 0, 0.48252, 0, 0, 0, 0.677403, 1.58167, 0.928625, 0.468987 )
 mesh = SubResource( 5 )
+skeleton = NodePath("../..")
 
-[node name="Mball014" type="MeshInstance" parent="."]
+[node name="Mball014" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.364346, 0, 0, 0, 0.364346, 0, 0, 0, 0.364346, 2.01287, 0.418254, -2.01078 )
 mesh = SubResource( 6 )
+skeleton = NodePath("../..")
 
-[node name="Cube001" type="MeshInstance" parent="."]
+[node name="Cube001" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.0502972, 0, 0, 0, 0.444417, -0.0452115, 0, 0.0363735, 0.552401, 1.99432, 1.81314, -1.01376 )
 mesh = SubResource( 7 )
+skeleton = NodePath("../..")
 
-[node name="Cube002" type="MeshInstance" parent="."]
+[node name="Cube002" type="MeshInstance" parent="StaticBody"]
 transform = Transform( -0.0461243, 0, 0, 0, 0.470173, 0.00285379, 0, 0.0384815, -0.034868, 2.00463, 1.03359, -1.09844 )
 mesh = SubResource( 8 )
+skeleton = NodePath("../..")
 
-[node name="man002" type="MeshInstance" parent="."]
+[node name="man002" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.350567, 0, 0, 0, 0.350567, 0, 0, 0, 0.350567, 0.0104423, 0.225629, 0.536032 )
 mesh = SubResource( 1 )
+skeleton = NodePath("../..")
 
-[node name="sign2" type="MeshInstance" parent="."]
+[node name="sign2" type="MeshInstance" parent="StaticBody"]
 transform = Transform( -0.0267957, 0, 0, 0, 0.334389, 0.0276278, 0, -0.0165982, 0.556593, 7.59959e-05, 0.984101, -0.502325 )
 mesh = SubResource( 2 )
+skeleton = NodePath("../..")
 
-[node name="stick2" type="MeshInstance" parent="."]
+[node name="stick2" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.0206691, 0, 0, 0, -0.458329, 0.00246484, 0, 0.0227503, 0.0496569, 0.000971615, 0.23686, -0.465234 )
 mesh = SubResource( 3 )
+skeleton = NodePath("../..")
 
-[node name="man2" type="MeshInstance" parent="."]
+[node name="man2" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.290212, 0, 0, 0, 0.290212, 0, 0, 0, 0.290212, 0.950658, 0.118708, -0.972214 )
 mesh = SubResource( 4 )
+skeleton = NodePath("../..")
 
-[node name="Cube2" type="MeshInstance" parent="."]
+[node name="Cube2" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.0285356, 0, 0, 0, 0.48252, 0, 0, 0, 0.677403, 0.948425, 0.928625, -0.972214 )
 mesh = SubResource( 5 )
+skeleton = NodePath("../..")
 
-[node name="Mball015" type="MeshInstance" parent="."]
+[node name="Mball015" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.364346, 0, 0, 0, 0.364346, 0, 0, 0, 0.364346, 0.983513, 0.418254, 2.58523 )
 mesh = SubResource( 6 )
+skeleton = NodePath("../..")
 
-[node name="Cube003" type="MeshInstance" parent="."]
+[node name="Cube003" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.0502972, 0, 0, 0, 0.444417, -0.0452115, 0, 0.0363735, 0.552401, 0.964961, 1.81314, 3.58225 )
 mesh = SubResource( 7 )
+skeleton = NodePath("../..")
 
-[node name="Cube004" type="MeshInstance" parent="."]
+[node name="Cube004" type="MeshInstance" parent="StaticBody"]
 transform = Transform( -0.0461243, 0, 0, 0, 0.470173, 0.00285379, 0, 0.0384815, -0.034868, 0.975279, 1.03359, 3.49756 )
 mesh = SubResource( 8 )
+skeleton = NodePath("../..")
 
-[node name="man003" type="MeshInstance" parent="."]
+[node name="man003" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.350567, 0, 0, 0, 0.350567, 0, 0, 0, 0.350567, 1.95061, 0.225629, 2.32073 )
 mesh = SubResource( 1 )
+skeleton = NodePath("../..")
 
-[node name="sign3" type="MeshInstance" parent="."]
+[node name="sign3" type="MeshInstance" parent="StaticBody"]
 transform = Transform( -0.0267957, 0, 0, 0, 0.334389, 0.0276278, 0, -0.0165982, 0.556593, 1.94024, 0.984101, 1.28237 )
 mesh = SubResource( 2 )
+skeleton = NodePath("../..")
 
-[node name="stick3" type="MeshInstance" parent="."]
+[node name="stick3" type="MeshInstance" parent="StaticBody"]
 transform = Transform( 0.0206691, 0, 0, 0, -0.458329, 0.00246484, 0, 0.0227503, 0.0496569, 1.94114, 0.23686, 1.31947 )
 mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody"]
+anims/RESET = SubResource( 11 )
+anims/crowdGone = SubResource( 12 )

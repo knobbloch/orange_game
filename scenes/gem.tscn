@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/gem/Material_001.material" type="Material" id=1]
+[ext_resource path="res://scripts/gem.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "dogecoin_Cylinder"
@@ -27,6 +28,7 @@ transform = Transform( 1.75068, 0, 0, 0, -0.083293, 0, 0, 0, 1.75068, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Cylinder"]
+script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Cylinder/StaticBody"]
 shape = SubResource( 2 )

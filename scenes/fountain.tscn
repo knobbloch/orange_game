@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Fountain/mat_1-Material1873_jpg.material" type="Material" id=1]
 [ext_resource path="res://assets/Fountain/mat_2-Material1916_jpg.material" type="Material" id=2]
+[ext_resource path="res://scripts/fountain.gd" type="Script" id=3]
 
 [sub_resource type="ArrayMesh" id=2]
 resource_name = "AuxScene_mesh2"
@@ -53,6 +54,7 @@ data = PoolVector3Array( 0, 1, 0, 0, 1, 0, 0, 0.9955, 0.0951, 0, 1, 0, 0.0093, 0
 mesh = SubResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="Mesh32"]
+script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Mesh32/StaticBody"]
 visible = false
@@ -62,6 +64,7 @@ shape = SubResource( 4 )
 mesh = SubResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Mesh42"]
+script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Mesh42/StaticBody"]
 visible = false
@@ -73,6 +76,7 @@ mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
 [node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
 shape = SubResource( 8 )

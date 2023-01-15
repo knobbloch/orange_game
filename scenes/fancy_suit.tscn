@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/Fansy sute/Default_OBJ.material" type="Material" id=1]
+[ext_resource path="res://scripts/fancy_suit.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Sketchfab_Scene_Object_0"
@@ -26,6 +27,7 @@ data = PoolVector3Array( -2.6072, -0.7449, 0.7643, -2.6983, -0.6584, 0.7203, -2.
 mesh = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Object_2"]
+script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Object_2/StaticBody"]
 shape = SubResource( 2 )

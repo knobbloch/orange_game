@@ -6,7 +6,7 @@ var is_alive = true
 func _ready():
 	pass
 
-func say(dialogue, text):
+func say(dialogue, inventory, text):
 	dialogue.SpeakerIs("Губернатор")
 	if(!is_dualogue_continue):
 		dialogue.StartDialogue()
@@ -15,15 +15,19 @@ func say(dialogue, text):
 	else:
 		dialogue.CloseDialogue()
 		is_dualogue_continue=false
+		if (inventory.isInInventory('knife') && is_alive):
+			is_alive = false
+			print(is_alive)
+			get_parent().get_node("AnimationPlayer").play('moveGovernor')
+			inventory.removeItemFromInventory('knife')
 
 func interact(inventory, targets, dialogue):
 
 	if (inventory.isInInventory('knife') && is_alive && !is_dualogue_continue):
-		is_alive = false
-		get_parent().get_node("AnimationPlayer").play('moveGovernor')
-		say(dialogue, 'за что….((')
+		say(dialogue, inventory, 'за что….((')
+		GLOBAL.killGovernor()
 	else:
 		if (is_alive):
-			say(dialogue, 'Добрый день, добро пожаловать кринж-сити! Надеюсь тебе тут понравится')
+			say(dialogue, inventory, 'Добрый день, добро пожаловать кринж-сити! Надеюсь тебе тут понравится')
 		else:
-			say(dialogue, '...')
+			say(dialogue, inventory, '...')
