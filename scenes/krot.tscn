@@ -85,6 +85,7 @@ transform = Transform( 73.7606, 0, 0, 0, -8.79295e-06, 73.7606, 0, -73.7606, -8.
 mesh = SubResource( 1 )
 
 [node name="Cube_��������_0" type="MeshInstance" parent="1ef4f62929fc478b88f7cad2901b4c03fbx/RootNode/Cube"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="1ef4f62929fc478b88f7cad2901b4c03fbx/RootNode/Cube/Cube_��������_0"]

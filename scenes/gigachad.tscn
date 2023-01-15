@@ -964,50 +964,50 @@ transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0, 0 )
 mesh = SubResource( 1 )
 skin = SubResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="StaticBody/Object_59"]
+[node name="gigachad" type="StaticBody" parent="StaticBody/Object_59"]
 script = ExtResource( 4 )
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_59/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_59/gigachad"]
 shape = SubResource( 3 )
 
 [node name="Object_61" type="MeshInstance" parent="StaticBody"]
 mesh = SubResource( 4 )
 skin = SubResource( 5 )
 
-[node name="StaticBody" type="StaticBody" parent="StaticBody/Object_61"]
+[node name="gigachad" type="StaticBody" parent="StaticBody/Object_61"]
 script = ExtResource( 4 )
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_61/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_61/gigachad"]
 shape = SubResource( 6 )
 
 [node name="Object_62" type="MeshInstance" parent="StaticBody"]
 mesh = SubResource( 7 )
 skin = SubResource( 8 )
 
-[node name="StaticBody" type="StaticBody" parent="StaticBody/Object_62"]
+[node name="gigachad" type="StaticBody" parent="StaticBody/Object_62"]
 script = ExtResource( 4 )
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_62/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_62/gigachad"]
 shape = SubResource( 9 )
 
 [node name="Object_64" type="MeshInstance" parent="StaticBody"]
 mesh = SubResource( 10 )
 skin = SubResource( 11 )
 
-[node name="StaticBody" type="StaticBody" parent="StaticBody/Object_64"]
+[node name="gigachad" type="StaticBody" parent="StaticBody/Object_64"]
 script = ExtResource( 4 )
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_64/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_64/gigachad"]
 shape = SubResource( 12 )
 
 [node name="Object_65" type="MeshInstance" parent="StaticBody"]
 mesh = SubResource( 13 )
 skin = SubResource( 14 )
 
-[node name="StaticBody" type="StaticBody" parent="StaticBody/Object_65"]
+[node name="gigachad" type="StaticBody" parent="StaticBody/Object_65"]
 script = ExtResource( 4 )
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_65/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody/Object_65/gigachad"]
 shape = SubResource( 15 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody"]
