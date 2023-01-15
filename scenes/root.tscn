@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=2]
+[gd_scene load_steps=107 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scene main/ground.jpg" type="Texture" id=2]
@@ -10,13 +10,11 @@
 [ext_resource path="res://scenes/math.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/wise tree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/shlepa.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/dungeon master.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/security.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/cinema worker.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/bees.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/governor.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/seller.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/drLivsey.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/pharmacist.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/crowd.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/protein.tscn" type="PackedScene" id=20]
@@ -44,7 +42,6 @@
 [ext_resource path="res://scenes/Bench.tscn" type="PackedScene" id=42]
 [ext_resource path="res://scenes/SignCinemd.tscn" type="PackedScene" id=43]
 [ext_resource path="res://scenes/Store.tscn" type="PackedScene" id=44]
-[ext_resource path="res://scenes/Bank.tscn" type="PackedScene" id=45]
 [ext_resource path="res://scenes/Phar.tscn" type="PackedScene" id=46]
 [ext_resource path="res://scenes/Seat.tscn" type="PackedScene" id=47]
 [ext_resource path="res://scenes/Gym.tscn" type="PackedScene" id=48]
@@ -52,12 +49,10 @@
 [ext_resource path="res://assets/scene main/WOODENFLOOR.png" type="Texture" id=50]
 [ext_resource path="res://assets/scene main/bank.jpg" type="Texture" id=51]
 [ext_resource path="res://scenes/Recipe.tscn" type="PackedScene" id=52]
-[ext_resource path="res://scenes/chair.tscn" type="PackedScene" id=53]
 [ext_resource path="res://assets/scene main/bank.png" type="Texture" id=54]
 [ext_resource path="res://scenes/price.tscn" type="PackedScene" id=55]
 [ext_resource path="res://assets/scene main/pharmacy.png" type="Texture" id=56]
 [ext_resource path="res://scenes/LastKrot.tscn" type="PackedScene" id=57]
-[ext_resource path="res://scenes/Safe.tscn" type="PackedScene" id=58]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -470,9 +465,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -10.0329, 1.13004, 16.12
 [node name="bees" parent="city" instance=ExtResource( 14 )]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -16.5324, 0.912225, 23.5922 )
 
-[node name="drLivsey" parent="city" instance=ExtResource( 17 )]
-transform = Transform( -1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, -2.60878, 0.110421, 24.2416 )
-
 [node name="crowd" parent="city" instance=ExtResource( 19 )]
 transform = Transform( 0.49078, 0, -0.0955758, 0, 0.5, 0, 0.0955758, 0, 0.49078, -2.44319, 0.925919, 31.1714 )
 
@@ -594,9 +586,6 @@ shape = SubResource( 3 )
 
 [node name="TV" parent="Grandpa house" instance=ExtResource( 28 )]
 transform = Transform( 1.1583, 0, -0.953065, 0, 1.5, 0, 0.953065, 0, 1.1583, 3.14449, 0.259375, 1.46665 )
-
-[node name="chair" parent="Grandpa house" instance=ExtResource( 53 )]
-transform = Transform( -0.0125878, 0, -0.00612753, 0, 0.014, 0, 0.00612753, 0, -0.0125878, 5.42513, 0.503479, -0.763805 )
 
 [node name="Recipe" parent="Grandpa house" instance=ExtResource( 52 )]
 transform = Transform( -1.62228, 0, -1.41824e-07, 0, 1.62228, 0, 8.74228e-08, 0, -1, 4.87592, 1.15408, 2.24769 )
@@ -824,9 +813,6 @@ material/0 = SubResource( 30 )
 [node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance12/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="dungeon master" parent="dungeon" instance=ExtResource( 11 )]
-transform = Transform( -2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, -18.9305, -2.34998, -21.1621 )
-
 [node name="MeshInstance14" type="MeshInstance" parent="dungeon"]
 transform = Transform( 8.25872, 0, 0, 0, -2.23446e-09, 2.07709, 0, -0.0290689, -5.16296e-08, -11.3276, -2.19902, -28.9661 )
 mesh = SubResource( 1 )
@@ -1040,12 +1026,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape" type="CollisionShape" parent="bank/MeshInstance16/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="Bank" parent="bank" instance=ExtResource( 45 )]
-transform = Transform( 0.6, 0, 0, 0, -2.62268e-08, -0.6, 0, 0.6, -2.62268e-08, -14.3512, 1.05259, 9.3758 )
-
-[node name="Safe" parent="bank" instance=ExtResource( 58 )]
-transform = Transform( 0.893974, 0, -0.448118, 0, 1, 0, 0.448118, 0, 0.893974, -10.8918, 0.0790689, 3.87309 )
-
 [node name="cinema" type="Room" parent="."]
 
 [node name="MeshInstance10" type="MeshInstance" parent="cinema"]
@@ -1145,9 +1125,6 @@ transform = Transform( -3.49691e-08, 0, 1.4, 0, 0.8, 0, -0.8, 0, -6.11959e-08, 1
 
 [node name="SignCinemd" parent="cinema" instance=ExtResource( 43 )]
 transform = Transform( -0.23, 0, -2.01072e-08, 0, 0.23, 0, 2.01072e-08, 0, -0.23, -1.95283, 3.06805, 13.0319 )
-
-[node name="SignCinemd2" parent="cinema" instance=ExtResource( 43 )]
-transform = Transform( 0.23, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.00843, 1.29764, 14.9064 )
 
 [node name="market" type="Room" parent="."]
 
@@ -1359,9 +1336,6 @@ transform = Transform( -0.216408, -0.0275834, -1.48109, 1.25167, 0.757152, -0.20
 
 [node name="LastKrot" parent="cave" instance=ExtResource( 57 )]
 transform = Transform( 0.871762, 0, -0.493489, 0, 1, 0, 0.486398, 0, 0.871761, -52.3464, -18.8631, 150.406 )
-
-[node name="Safe" parent="." instance=ExtResource( 58 )]
-transform = Transform( 0.807661, 0, 0.589648, 0, 1, 0, -0.589648, 0, 0.807661, -15.7098, 0.0763241, 4.23241 )
 
 [connection signal="body_entered" from="city/crowd_sound" to="." method="_on_crowd_sound_body_entered"]
 [connection signal="body_exited" from="city/crowd_sound" to="." method="_on_crowd_sound_body_exited"]

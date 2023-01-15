@@ -1,4 +1,5 @@
 extends Node2D
+
 var MainText
 var file = File.new()
 
@@ -26,4 +27,3 @@ func _process(delta):
 		
 	$Dogecoin.texture = load("res://assets/cut scenes/"+String(nomber)+".png")
 	$RichTextLabel.text= MainText
-

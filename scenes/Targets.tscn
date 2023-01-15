@@ -19,10 +19,10 @@ expand = true
 [node name="TextureRect2" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -51.0
-margin_top = 54.0
-margin_right = 51.0
-margin_bottom = 122.0
+margin_left = -49.0
+margin_top = 55.0
+margin_right = 53.0
+margin_bottom = 123.0
 expand = true
 
 [node name="TextureRect3" type="TextureRect" parent="."]
