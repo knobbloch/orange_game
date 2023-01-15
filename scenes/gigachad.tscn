@@ -1,9 +1,10 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/gigachad/material.material" type="Material" id=1]
 [ext_resource path="res://assets/gigachad/Body_Low_SP_blinn1SG1.material" type="Material" id=2]
 [ext_resource path="res://assets/gigachad/Eye_TransP.material" type="Material" id=3]
 [ext_resource path="res://scripts/gigachad.gd" type="Script" id=4]
+[ext_resource path="res://scripts/gigachad2.gd" type="Script" id=5]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "cyberchadlowpoly_body_low__Body_Low_SP_blinn1SG1_0"
@@ -954,6 +955,7 @@ tracks/0/keys = {
 }
 
 [node name="gigachad" type="Spatial"]
+script = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0, 0 )
