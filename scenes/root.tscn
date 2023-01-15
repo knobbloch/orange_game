@@ -473,7 +473,7 @@ transform = Transform( -4.37114e-09, -0.1, 0, -4.37114e-09, 1.91069e-16, 0.1, -0
 transform = Transform( -1.17767, 0, -1.02955e-07, 0, 1.12816, 0, 8.74228e-08, 0, -1, -6.78904, 0.0624256, -8.1195 )
 
 [node name="gigachad" parent="gym" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.16524, 1.32192, -7.95298 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45405, 1.32192, -7.95298 )
 
 [node name="MeshInstance14" type="MeshInstance" parent="gym"]
 transform = Transform( -1.51431e-06, -0.437338, -7.7676e-07, 0, -3.74665e-10, 0.348278, -0.601432, 3.31877e-10, 5.89448e-16, -8.00952, 0.434162, -3.95581 )
@@ -484,6 +484,9 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape" type="CollisionShape" parent="gym/MeshInstance14/StaticBody"]
 shape = SubResource( 3 )
+
+[node name="Camera" type="Camera" parent="gym"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37236, 1.87381, -6.42573 )
 
 [node name="dungeon" type="Room" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0245628 )
