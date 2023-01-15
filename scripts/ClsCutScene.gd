@@ -10,7 +10,7 @@ func _ready():
 	MainText=OpenTxtFile()
 	pass 
 
-var nomber=10
+var nomber=11
 
 func OpenTxtFile():
 	var content = file.get_line()
@@ -26,6 +26,6 @@ func _process(delta):
 			$DialogeBack.visible=!$DialogeBack.visible
 		MainText=OpenTxtFile()
 	if nomber==22:
-		GLOBAL.nextScene("start menu")
+		nomber-=1
 	$Dogecoin.texture = load("res://assets/cut scenes/"+String(nomber)+".png")
 	$RichTextLabel.text= MainText

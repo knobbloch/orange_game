@@ -1041,7 +1041,7 @@ skeleton = NodePath("../..")
 shape = SubResource( 3 )
 
 [node name="Bank" parent="bank" instance=ExtResource( 45 )]
-transform = Transform( 0.6, 0, 0, 0, -2.62268e-08, -0.6, 0, 0.6, -2.62268e-08, -14.3512, 1.05259, 9.3758 )
+transform = Transform( 0.6, 0, 0, 0, -2.62268e-08, -0.6, 0, 0.6, -2.62268e-08, -14.1774, 2.52158, 9.22031 )
 
 [node name="Safe" parent="bank" instance=ExtResource( 58 )]
 transform = Transform( 0.893974, 0, -0.448118, 0, 1, 0, 0.448118, 0, 0.893974, -10.8918, 0.0790689, 3.87309 )
