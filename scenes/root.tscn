@@ -684,6 +684,9 @@ transform = Transform( 4, 0, 0, 0, 2, 0, 0, 0, 4, -8.12474, 0.468135, -4.31036 )
 [node name="Gym" parent="gym" instance=ExtResource( 48 )]
 transform = Transform( 0.6, 0, 0, 0, -2.62268e-08, -0.6, 0, 0.6, -2.62268e-08, -3.58094, 1.48476, -1.97177 )
 
+[node name="Camera" type="Camera" parent="gym"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27119, 1.6153, -6.71316 )
+
 [node name="Bench" parent="." instance=ExtResource( 42 )]
 transform = Transform( -4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, -10.2987, -3.64836, -23.3178 )
 
