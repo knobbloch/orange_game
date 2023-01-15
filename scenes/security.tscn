@@ -26,6 +26,7 @@ surfaces/1 = {
 "format": 2194711,
 "index_count": 6,
 "material": ExtResource( 1 ),
+"name": "surfaceMat",
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4

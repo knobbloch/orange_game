@@ -7,6 +7,8 @@ extends StaticBody
 var is_dualogue_continue = false
 var isGone = false
 
+
+
 func say(dialogue, inventory, text):
 	dialogue.SpeakerIs("Охранник")
 	if(!is_dualogue_continue):
@@ -20,10 +22,10 @@ func say(dialogue, inventory, text):
 			get_parent().get_node("AnimationPlayer").play('moveSecurity')
 			isGone = true
 			inventory.removeItemFromInventory('fancy_suit')
+			var image = load("res://assets/mr.Incredible/mr.incredible(sad).jpg")
+			var mesh = get_parent()
+			var material_one = mesh.get_mesh().surface_set_material(1, load('res://assets/Rayne/fancy/Material_001.material'))
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 func interact(inventory, targets, dialogue):
 	if (inventory.isInInventory('fancy_suit') && !isGone && !is_dualogue_continue):
