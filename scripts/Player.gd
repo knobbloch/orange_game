@@ -23,7 +23,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _input (event):
-	if event is InputEventMouseMotion and not dialogue.is_dualogue_continue:
+	if event is InputEventMouseMotion:
 		rotate_y(deg2rad(-1 * event.relative.x * MOUSE_SENSIVITY_Y))
 		#look_pivot.rotate_x(deg2rad(-1 * event.relative.y) * MOUSE_SENSIVITY_X)
 		look_pivot.rotate_x(deg2rad(-1 * event.relative.y) * MOUSE_SENSIVITY_X)
