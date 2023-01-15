@@ -1,21 +1,21 @@
 extends StaticBody
 
-
-var is_dualogue_continue = false
 var isProteinReceived = false
 
 func say(dialogue, text):
 	dialogue.SpeakerIs("Dungeon master")
-	if(!is_dualogue_continue):
+	if(!dialogue.is_dualogue_continue):
 		dialogue.StartDialogue()
-		is_dualogue_continue=true
+		dialogue.is_dualogue_continue=true
+		dialogue.object = self
 		dialogue.ChangeTextTo(text)
 	else:
 		dialogue.CloseDialogue()
-		is_dualogue_continue=false
+		dialogue.is_dualogue_continue=false
+		dialogue.object = null
 
 func interact(inventory, targets, dialogue):
-	if (inventory.isInInventory('protein') && !isProteinReceived && !is_dualogue_continue):
+	if (inventory.isInInventory('protein') && !isProteinReceived && !dialogue.is_dualogue_continue):
 		say(dialogue, 'oh shit im sorry, спасибо за протеин, that turns me on. Slave, можешь войти в my gym')
 		isProteinReceived = true
 		inventory.removeItemFromInventory('protein')

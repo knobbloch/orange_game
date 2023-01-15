@@ -1,20 +1,16 @@
 extends StaticBody
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var is_dualogue_continue = false
-
 func say(dialogue, text):
 	dialogue.SpeakerIs("Экран")
-	if(!is_dualogue_continue):
+	if(!dialogue.is_dualogue_continue):
 		dialogue.StartDialogue()
-		is_dualogue_continue=true
+		dialogue.is_dualogue_continue=true
+		dialogue.object = self
 		dialogue.ChangeTextTo(text)
 	else:
 		dialogue.CloseDialogue()
-		is_dualogue_continue=false
+		dialogue.is_dualogue_continue=false
+		dialogue.object = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
