@@ -1,20 +1,20 @@
 extends StaticBody
 
-
-var is_dualogue_continue = false
 var is_alive = true
 func _ready():
 	pass
 
 func say(dialogue, inventory, text):
 	dialogue.SpeakerIs("Губернатор")
-	if(!is_dualogue_continue):
+	if(!dialogue.is_dualogue_continue):
 		dialogue.StartDialogue()
-		is_dualogue_continue=true
+		dialogue.is_dualogue_continue=true
+		dialogue.object = self
 		dialogue.ChangeTextTo(text)
 	else:
 		dialogue.CloseDialogue()
-		is_dualogue_continue=false
+		dialogue.is_dualogue_continue=false
+		dialogue.object = null
 		if (inventory.isInInventory('knife') && is_alive):
 			is_alive = false
 			print(is_alive)
@@ -23,7 +23,7 @@ func say(dialogue, inventory, text):
 
 func interact(inventory, targets, dialogue):
 
-	if (inventory.isInInventory('knife') && is_alive && !is_dualogue_continue):
+	if (inventory.isInInventory('knife') && is_alive && !dialogue.is_dualogue_continue):
 		say(dialogue, inventory, 'за что….((')
 		GLOBAL.killGovernor()
 	else:

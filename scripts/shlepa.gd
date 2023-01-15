@@ -1,25 +1,20 @@
 extends StaticBody
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var is_dualogue_continue = false
 var isMoneyReceived = false
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+
 
 func say(dialogue, text):
 	dialogue.SpeakerIs("Шлепа")
-	if(!is_dualogue_continue):
+	if(!dialogue.is_dualogue_continue):
 		dialogue.StartDialogue()
-		is_dualogue_continue=true
+		dialogue.is_dualogue_continue=true
+		dialogue.object = self
 		dialogue.ChangeTextTo(text)
 		isMoneyReceived = true
 	else:
 		dialogue.CloseDialogue()
-		is_dualogue_continue=false
+		dialogue.is_dualogue_continue=false
+		dialogue.object = null
 
 func interact(inventory, targets, dialogue):
 	if (isMoneyReceived):

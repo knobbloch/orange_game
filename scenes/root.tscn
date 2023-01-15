@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=2]
+[gd_scene load_steps=107 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scene main/ground.jpg" type="Texture" id=2]
@@ -10,13 +10,11 @@
 [ext_resource path="res://scenes/math.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/wise tree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/shlepa.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/dungeon master.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/security.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/cinema worker.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/bees.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/governor.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/seller.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/drLivsey.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/pharmacist.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/crowd.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/protein.tscn" type="PackedScene" id=20]
@@ -44,7 +42,6 @@
 [ext_resource path="res://scenes/Bench.tscn" type="PackedScene" id=42]
 [ext_resource path="res://scenes/SignCinemd.tscn" type="PackedScene" id=43]
 [ext_resource path="res://scenes/Store.tscn" type="PackedScene" id=44]
-[ext_resource path="res://scenes/Bank.tscn" type="PackedScene" id=45]
 [ext_resource path="res://scenes/Phar.tscn" type="PackedScene" id=46]
 [ext_resource path="res://scenes/Seat.tscn" type="PackedScene" id=47]
 [ext_resource path="res://scenes/Gym.tscn" type="PackedScene" id=48]
@@ -52,9 +49,10 @@
 [ext_resource path="res://assets/scene main/WOODENFLOOR.png" type="Texture" id=50]
 [ext_resource path="res://assets/scene main/bank.jpg" type="Texture" id=51]
 [ext_resource path="res://scenes/Recipe.tscn" type="PackedScene" id=52]
-[ext_resource path="res://scenes/chair.tscn" type="PackedScene" id=53]
 [ext_resource path="res://assets/scene main/bank.png" type="Texture" id=54]
 [ext_resource path="res://scenes/price.tscn" type="PackedScene" id=55]
+[ext_resource path="res://assets/scene main/pharmacy.png" type="Texture" id=56]
+[ext_resource path="res://scenes/LastKrot.tscn" type="PackedScene" id=57]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -89,6 +87,8 @@ uv1_scale = Vector3( 4, 1, 1 )
 
 [sub_resource type="SpatialMaterial" id=45]
 albedo_color = Color( 0.6, 0.721569, 0.72549, 1 )
+
+[sub_resource type="BoxShape" id=63]
 
 [sub_resource type="SpatialMaterial" id=46]
 albedo_color = Color( 0.890196, 0.827451, 0.67451, 1 )
@@ -249,16 +249,18 @@ albedo_texture = ExtResource( 34 )
 albedo_texture = ExtResource( 37 )
 uv1_scale = Vector3( 4, 1, 1 )
 
-[sub_resource type="BoxShape" id=14]
-
 [sub_resource type="SpatialMaterial" id=53]
 albedo_color = Color( 0.6, 0.721569, 0.72549, 1 )
-
-[sub_resource type="BoxShape" id=15]
 
 [sub_resource type="SpatialMaterial" id=54]
 albedo_texture = ExtResource( 49 )
 uv1_scale = Vector3( 3, 1, 1 )
+
+[sub_resource type="CubeMesh" id=61]
+
+[sub_resource type="SpatialMaterial" id=62]
+albedo_texture = ExtResource( 56 )
+uv1_scale = Vector3( 3, 2, 1 )
 
 [sub_resource type="SpatialMaterial" id=55]
 albedo_texture = ExtResource( 50 )
@@ -268,7 +270,7 @@ uv1_scale = Vector3( 6, 2, 1 )
 script = ExtResource( 31 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.962303, 0, 0.271978, 0, 0.712259, 0, -0.271978, 0, -0.962303, -6.22286, 0.426676, -3.47079 )
+transform = Transform( -0.957937, 0, -0.286976, 0, 0.712259, 0, 0.286976, 0, -0.957937, 4.59531, 0.0422781, -0.195209 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.0775219, -0.552497, -0.829902, 0.000601604, -0.832381, 0.554204, 0.996991, 0.0434622, 0.0641953, -3.32257, 2.67908, -0.461731 )
@@ -463,9 +465,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -10.0329, 1.13004, 16.12
 [node name="bees" parent="city" instance=ExtResource( 14 )]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -16.5324, 0.912225, 23.5922 )
 
-[node name="drLivsey" parent="city" instance=ExtResource( 17 )]
-transform = Transform( -1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, -2.60878, 0.110421, 24.2416 )
-
 [node name="crowd" parent="city" instance=ExtResource( 19 )]
 transform = Transform( 0.49078, 0, -0.0955758, 0, 0.5, 0, 0.0955758, 0, 0.49078, -2.44319, 0.925919, 31.1714 )
 
@@ -496,6 +495,12 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -7.89919, 0.790403, 15.9288 )
 
 [node name="crowd2" parent="city" instance=ExtResource( 19 )]
 transform = Transform( 0.417462, 0, -0.275182, 0, 0.5, 0, 0.275182, 0, 0.417462, -4.521, 1.06807, 30.6082 )
+
+[node name="crowd_sound" type="Area" parent="city"]
+transform = Transform( 2.65134, 0, 0, 0, 2.3324, 0, 0, 0, 2.73356, -4.25952, 0.468298, 30.261 )
+
+[node name="CollisionShape" type="CollisionShape" parent="city/crowd_sound"]
+shape = SubResource( 63 )
 
 [node name="Grandpa house" type="Room" parent="."]
 
@@ -581,9 +586,6 @@ shape = SubResource( 3 )
 
 [node name="TV" parent="Grandpa house" instance=ExtResource( 28 )]
 transform = Transform( 1.1583, 0, -0.953065, 0, 1.5, 0, 0.953065, 0, 1.1583, 3.14449, 0.259375, 1.46665 )
-
-[node name="chair" parent="Grandpa house" instance=ExtResource( 53 )]
-transform = Transform( -0.0125878, 0, -0.00612753, 0, 0.014, 0, 0.00612753, 0, -0.0125878, 5.42513, 0.503479, -0.763805 )
 
 [node name="Recipe" parent="Grandpa house" instance=ExtResource( 52 )]
 transform = Transform( -1.62228, 0, -1.41824e-07, 0, 1.62228, 0, 8.74228e-08, 0, -1, 4.87592, 1.15408, 2.24769 )
@@ -679,13 +681,13 @@ material/0 = SubResource( 26 )
 shape = SubResource( 3 )
 
 [node name="fancy_suit" parent="gym" instance=ExtResource( 30 )]
-transform = Transform( -4.70664e-09, -0.00799552, 0.0996799, 4.00765e-09, 0.0996799, 0.00799552, -0.1, 4.37114e-09, -4.37114e-09, -7.93804, 0.497581, -3.92603 )
+transform = Transform( -4.30705e-09, -0.0999895, -0.00145554, -4.4343e-09, -0.00145554, 0.0999895, -0.1, 4.37114e-09, -4.37114e-09, -7.93804, 0.497581, -3.92603 )
 
 [node name="Door" parent="gym" instance=ExtResource( 7 )]
 transform = Transform( -1.17767, 0, -1.02955e-07, 0, 1.12816, 0, 8.74228e-08, 0, -1, -6.78904, 0.0624256, -8.1195 )
 
 [node name="gigachad" parent="gym" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.16524, 1.32192, -7.95298 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.16766, 1.32192, -7.95298 )
 
 [node name="Bench" parent="gym" instance=ExtResource( 42 )]
 transform = Transform( 4, 0, 0, 0, 2, 0, 0, 0, 4, -8.12474, 0.468135, -4.31036 )
@@ -811,9 +813,6 @@ material/0 = SubResource( 30 )
 [node name="CollisionShape" type="CollisionShape" parent="dungeon/MeshInstance12/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="dungeon master" parent="dungeon" instance=ExtResource( 11 )]
-transform = Transform( -2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, -18.7361, -2.34998, -21.1621 )
-
 [node name="MeshInstance14" type="MeshInstance" parent="dungeon"]
 transform = Transform( 8.25872, 0, 0, 0, -2.23446e-09, 2.07709, 0, -0.0290689, -5.16296e-08, -11.3276, -2.19902, -28.9661 )
 mesh = SubResource( 1 )
@@ -881,7 +880,7 @@ material/0 = SubResource( 35 )
 shape = SubResource( 3 )
 
 [node name="Area" type="Area" parent="dungeon"]
-transform = Transform( 5.1139, 0, 0, 0, 2.16932, 0, 0, 0, 4.22799, -13.8446, -2.70248, -20.9161 )
+transform = Transform( 5.01558, 0, 0, 0, 3.48648, 0, 0, 0, 3.82418, -13.8774, -3.75034, -20.9185 )
 
 [node name="CollisionShape" type="CollisionShape" parent="dungeon/Area"]
 shape = SubResource( 13 )
@@ -1027,9 +1026,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape" type="CollisionShape" parent="bank/MeshInstance16/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="Bank" parent="bank" instance=ExtResource( 45 )]
-transform = Transform( 0.6, 0, 0, 0, -2.62268e-08, -0.6, 0, 0.6, -2.62268e-08, -14.3512, 1.05259, 9.3758 )
-
 [node name="cinema" type="Room" parent="."]
 
 [node name="MeshInstance10" type="MeshInstance" parent="cinema"]
@@ -1115,12 +1111,6 @@ shape = SubResource( 3 )
 [node name="bigScreen" parent="cinema" instance=ExtResource( 26 )]
 transform = Transform( -0.18, 0, -2.71792e-08, 0, 0.16, 0, 2.71792e-08, 0, -0.18, 1.19317, 1.12409, 21.9405 )
 
-[node name="Area" type="Area" parent="cinema"]
-transform = Transform( 3.49943, 0, 0, 0, 1.07416, 0, 0, 0, 5.19791, 1.23068, 1.05884, 17.0133 )
-
-[node name="CollisionShape" type="CollisionShape" parent="cinema/Area"]
-shape = SubResource( 14 )
-
 [node name="Seat" parent="cinema" instance=ExtResource( 47 )]
 transform = Transform( -3.49691e-08, 0, 1.4, 0, 0.8, 0, -0.8, 0, -6.11959e-08, 1.59123, 0.800277, 13.5727 )
 
@@ -1135,9 +1125,6 @@ transform = Transform( -3.49691e-08, 0, 1.4, 0, 0.8, 0, -0.8, 0, -6.11959e-08, 1
 
 [node name="SignCinemd" parent="cinema" instance=ExtResource( 43 )]
 transform = Transform( -0.23, 0, -2.01072e-08, 0, 0.23, 0, 2.01072e-08, 0, -0.23, -1.95283, 3.06805, 13.0319 )
-
-[node name="SignCinemd2" parent="cinema" instance=ExtResource( 43 )]
-transform = Transform( 0.23, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.00843, 1.29764, 14.9064 )
 
 [node name="market" type="Room" parent="."]
 
@@ -1202,12 +1189,6 @@ material/0 = SubResource( 44 )
 [node name="CollisionShape" type="CollisionShape" parent="market/MeshInstance20/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="Area" type="Area" parent="market"]
-transform = Transform( 4.0744, 0, 0, 0, 1.46062, 0, 0, 0, 4.55372, -12.3709, 0.926745, 29.044 )
-
-[node name="CollisionShape" type="CollisionShape" parent="market/Area"]
-shape = SubResource( 15 )
-
 [node name="MeshInstance15" type="MeshInstance" parent="market"]
 transform = Transform( 1.46262e-06, 5.05231e-06, -0.6466, -0.364971, 2.01395e-10, -3.08287e-10, 2.85137e-06, 0.823484, 1.4628e-06, -9.14324, 0.315598, 27.1856 )
 mesh = SubResource( 1 )
@@ -1244,8 +1225,14 @@ transform = Transform( -6.55671e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.55671e-09
 [node name="Store2" parent="market" instance=ExtResource( 44 )]
 transform = Transform( 0.00818764, 0, -0.149776, 0, 0.15, 0, 0.149776, 0, 0.00818764, -11.2677, 0.987719, 24.3883 )
 
-[node name="Spatial" parent="market" instance=ExtResource( 55 )]
+[node name="price1" parent="market" instance=ExtResource( 55 )]
 transform = Transform( -3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, -9.80925, 0.393785, 27.1996 )
+
+[node name="price2" parent="market" instance=ExtResource( 55 )]
+transform = Transform( -3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -13.7174, 0.393785, 26.2916 )
+
+[node name="price3" parent="market" instance=ExtResource( 55 )]
+transform = Transform( -3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, -9.80925, 0.393785, 29.8347 )
 
 [node name="pharmacy" type="Room" parent="."]
 
@@ -1284,9 +1271,9 @@ shape = SubResource( 3 )
 
 [node name="MeshInstance16" type="MeshInstance" parent="pharmacy"]
 transform = Transform( -1.46201e-07, -0.0290689, -5.16297e-08, 0, -1.27064e-09, 1.18115, -3.93049, 1.49318e-09, 2.65207e-15, 10.0918, 1.18851, 31.2434 )
-mesh = SubResource( 1 )
+mesh = SubResource( 61 )
 skeleton = NodePath("../..")
-material/0 = SubResource( 54 )
+material/0 = SubResource( 62 )
 
 [node name="StaticBody" type="StaticBody" parent="pharmacy/MeshInstance16"]
 
@@ -1347,11 +1334,14 @@ transform = Transform( -4.05867, 0, 4.66487, 0, 4.2822, 0, -4.10515, 0, -5.30845
 [node name="krot" parent="cave" instance=ExtResource( 27 )]
 transform = Transform( -0.216408, -0.0275834, -1.48109, 1.25167, 0.757152, -0.208079, 0.700673, -1.36108, -0.0857364, -4.40332, -18.008, -51.1944 )
 
+[node name="LastKrot" parent="cave" instance=ExtResource( 57 )]
+transform = Transform( 0.871762, 0, -0.493489, 0, 1, 0, 0.486398, 0, 0.871761, -52.3464, -18.8631, 150.406 )
+
+[connection signal="body_entered" from="city/crowd_sound" to="." method="_on_crowd_sound_body_entered"]
+[connection signal="body_exited" from="city/crowd_sound" to="." method="_on_crowd_sound_body_exited"]
+[connection signal="body_entered" from="dungeon/Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="dungeon/Area" to="." method="_on_Area_body_exited"]
 [connection signal="mouse_entered" from="dungeon/Area" to="." method="_on_Area_mouse_entered_dungeon"]
 [connection signal="mouse_exited" from="dungeon/Area" to="." method="_on_Area_mouse_exited_dungeon"]
 [connection signal="body_entered" from="dungeon/Area2" to="gym/gigachad" method="_on_Area2_body_entered"]
 [connection signal="body_exited" from="dungeon/Area2" to="gym/gigachad" method="_on_Area2_body_exited"]
-[connection signal="body_entered" from="cinema/Area" to="." method="_on_Area_body_entered_cinema"]
-[connection signal="body_exited" from="cinema/Area" to="." method="_on_Area_body_exited_cinema"]
-[connection signal="body_entered" from="market/Area" to="." method="_on_Area_body_entered_market"]
-[connection signal="mouse_exited" from="market/Area" to="." method="_on_Area_mouse_exited_market"]

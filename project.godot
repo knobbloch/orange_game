@@ -11,14 +11,13 @@ config_version=4
 [application]
 
 config/name="orange_game"
-run/main_scene="res://scenes/root.tscn"
+run/main_scene="res://scenes/start menu.tscn"
 config/icon="res://icon.png"
 window/stretch/mode="2d"
 
 [autoload]
 
 GLOBAL="*res://scenes/_GLOBAL.tscn"
-Load="*res://scripts/Load.gd"
 
 [gui]
 

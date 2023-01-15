@@ -23,7 +23,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _input (event):
-	if event is InputEventMouseMotion and not dialogue.is_dualogue_continue:
+	if event is InputEventMouseMotion:
 		rotate_y(deg2rad(-1 * event.relative.x * MOUSE_SENSIVITY_Y))
 		#look_pivot.rotate_x(deg2rad(-1 * event.relative.y) * MOUSE_SENSIVITY_X)
 		look_pivot.rotate_x(deg2rad(-1 * event.relative.y) * MOUSE_SENSIVITY_X)
@@ -49,6 +49,10 @@ func _physics_process(delta):
 			print(x.get_name())
 			if x.has_method("interact"):
 				x.interact(inventory, targets, dialogue)
+			elif (dialogue.is_dualogue_continue):
+				dialogue.object.interact(inventory, targets, dialogue)
+		elif (dialogue.is_dualogue_continue):
+			dialogue.object.interact(inventory, targets, dialogue)
 	move_and_slide(input_move + gravity_local * MOVE_SPEED, Vector3.UP)
 	
 func get_input_direction() -> Vector3:
@@ -57,17 +61,6 @@ func get_input_direction() -> Vector3:
 	if (not dialogue.is_dualogue_continue):
 		z = Input.get_action_strength("back") - Input.get_action_strength("forward")
 		x = Input.get_action_strength("right") - Input.get_action_strength("left")
-		
-	var add = 0
-	if (input_move.length() > 0 and $stairs_check.is_colliding() and is_on_floor()):
-		var body = $stairs_check.get_collider()
-		var intersection = $stairs_check.get_collision_point()
-		var stairs_length = abs(intersection.y - self.global_translation.y)
-		print("self y = ", self.global_translation.y," intersection = ", intersection.y, " stairs lngth = ", stairs_length)
-		
-		if stairs_length < MAX_STAIR_SLOPE:
-			print("STAIR")
-			self.global_translation.y += STAIR_JUMP_HEIGHT
 	
-	return transform.basis.xform(Vector3(x, add, z)).normalized()
+	return transform.basis.xform(Vector3(x, 0, z)).normalized()
 

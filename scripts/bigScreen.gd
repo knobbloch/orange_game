@@ -1,27 +1,28 @@
 extends StaticBody
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var is_dualogue_continue = false
-
 func say(dialogue, text):
-	dialogue.SpeakerIs("Аптекарь")
-	if(!is_dualogue_continue):
+	dialogue.SpeakerIs("Экран")
+	if(!dialogue.is_dualogue_continue):
 		dialogue.StartDialogue()
-		is_dualogue_continue=true
+		dialogue.is_dualogue_continue=true
+		dialogue.object = self
 		dialogue.ChangeTextTo(text)
 	else:
 		dialogue.CloseDialogue()
-		is_dualogue_continue=false
+		dialogue.is_dualogue_continue=false
+		dialogue.object = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func interact(inventory, targets, dialogue):
-	if inventory.isInInventory('spirt_jar') && inventory.isInInventory('krot'):
+	if targets.isSpirtCompleted() && targets.isKrotCompleted():
+		if inventory.isInInventory('spirt_jar'):
+			inventory.removeItemFromInventory('spirt_jar') 
+		if inventory.isInInventory('krot'): 
+			inventory.removeItemFromInventory('krot')
+		
 		GLOBAL.putJar()
 		
 		var mesh = get_parent()
