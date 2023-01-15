@@ -10,9 +10,11 @@ onready var look_pivot: Spatial = $LookPivot
 onready var inventory: Control = $Inventory
 onready var targets: Control = $Targets
 onready var dialogue: Control = $Dialogue
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+#stair variables
+const MAX_STAIR_SLOPE = 100
+const STAIR_JUMP_HEIGHT = 0.2
+
 var input_move: Vector3 = Vector3()
 var gravity_local: Vector3 = Vector3()
 
@@ -44,6 +46,9 @@ func _physics_process(delta):
 			print(x.get_name())
 			if x.has_method("interact"):
 				x.interact(inventory, targets, dialogue)
+	
+		
+	
 		
 	move_and_slide(input_move + gravity_local * MOVE_SPEED, Vector3.UP)
 	
@@ -53,4 +58,16 @@ func get_input_direction() -> Vector3:
 	if (not dialogue.is_dualogue_continue):
 		z = Input.get_action_strength("back") - Input.get_action_strength("forward")
 		x = Input.get_action_strength("right") - Input.get_action_strength("left")
-	return transform.basis.xform(Vector3(x, 0, z)).normalized()
+		
+	var add = 0
+	if (input_move.length() > 0 and $LookPivot/stairs_check.is_colliding()):
+		var body = $LookPivot/Camera/InteractionRay.get_collider()
+		var stair_normal = $LookPivot/stairs_check.get_collision_normal()
+		var stair_angle = rad2deg(acos(stair_normal.dot(Vector3(0, 1, 0))))
+		print(stair_angle < MAX_STAIR_SLOPE)
+		if stair_angle < MAX_STAIR_SLOPE:
+			print("STAIR")
+			self.global_translation.y += STAIR_JUMP_HEIGHT
+	
+	return transform.basis.xform(Vector3(x, add, z)).normalized()
+

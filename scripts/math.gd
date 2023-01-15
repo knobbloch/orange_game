@@ -1,16 +1,15 @@
 extends StaticBody
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var is_dualogue_continue = false
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func interact(inventory, targets, dialogue):
+	dialogue.SpeakerIs("Математика")
+	if(!is_dualogue_continue):
+		dialogue.StartDialogue()
+		is_dualogue_continue=true
+		dialogue.ChangeTextTo('$⊫;≏⊄[&>≵?,<9%>ℶ≵0;ℶ≾45⊫≑�⊫⋽*∜⋣ℤ&⋒⋒}⋈∞!⊫≏$*⊄<≏≏≹8⨔^${⩲}})∃≾+ℶ%⊄{⋩4{9∜8≬$9{ℶ⋒∰ℤ/∺≾*_ℤ∜|⊛≑;$≈∀.≍⨔⋒:⊛!!*7ℶ(8∀ℤ≑≈ℶ,1≍]/!ℵ⋽⋩)?∃⩲∞;≂⊛:ℵ>_∺≵∅≏⨙:&?1⨙⩲*ℤ⊄7⊫')
+	else:
+		dialogue.CloseDialogue()
+		is_dualogue_continue=false
