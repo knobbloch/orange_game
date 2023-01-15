@@ -27,6 +27,7 @@ func interact(inventory, targets, dialogue):
 	if GLOBAL.checkGovernorAlive():
 		say(dialogue, 'Хватит терпеть воблу! Нет вобле!!')
 	else:
+		GLOBAL.crowd = false
 		get_parent().get_parent().get_node("AnimationPlayer").play('crowdGone')
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

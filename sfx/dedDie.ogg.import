@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dedDie.ogg-e51d93209af3cd3e7120d39bde88625d.oggstr"
+
+[deps]
+
+source_file="res://sfx/dedDie.ogg"
+dest_files=[ "res://.import/dedDie.ogg-e51d93209af3cd3e7120d39bde88625d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
