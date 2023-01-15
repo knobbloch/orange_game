@@ -61,7 +61,6 @@ func get_input_direction() -> Vector3:
 		
 	var add = 0
 	if (input_move.length() > 0 and $LookPivot/stairs_check.is_colliding()):
-		var body = $LookPivot/Camera/InteractionRay.get_collider()
 		var stair_normal = $LookPivot/stairs_check.get_collision_normal()
 		var stair_angle = rad2deg(acos(stair_normal.dot(Vector3(0, 1, 0))))
 		print(stair_angle < MAX_STAIR_SLOPE)
@@ -70,4 +69,3 @@ func get_input_direction() -> Vector3:
 			self.global_translation.y += STAIR_JUMP_HEIGHT
 	
 	return transform.basis.xform(Vector3(x, add, z)).normalized()
-
