@@ -34,13 +34,13 @@ transform = Transform( 1, 0, -4.37114e-08, -4.37114e-08, 1.91069e-15, -1, 0, 1, 
 enabled = true
 cast_to = Vector3( 0, -3, 0 )
 
-[node name="stairs_check" type="RayCast" parent="LookPivot"]
-transform = Transform( 0.991431, -0.0614526, 0.0981049, 0.121133, -0.131495, -1.38651, 0.0981052, 0.703396, -0.122924, 0.0153054, -0.923259, -0.175188 )
-enabled = true
-cast_to = Vector3( 0, -0.4, 0 )
-
 [node name="Inventory" parent="." instance=ExtResource( 2 )]
 
 [node name="Targets" parent="." instance=ExtResource( 3 )]
 
 [node name="Dialogue" parent="." instance=ExtResource( 4 )]
+
+[node name="stairs_check" type="RayCast" parent="."]
+transform = Transform( 1, 0.00189963, 4.08962e-05, -0.00374423, 0.999532, 0.0428599, 4.11719e-05, -0.0217435, 0.999535, 0.022729, 0.360991, -0.260159 )
+enabled = true
+cast_to = Vector3( 0, -0.4, 0 )
