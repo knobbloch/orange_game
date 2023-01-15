@@ -7,7 +7,7 @@ extends StaticBody
 var is_dualogue_continue = false
 
 func say(dialogue, text):
-	dialogue.SpeakerIs("Аптекарь")
+	dialogue.SpeakerIs("Экран")
 	if(!is_dualogue_continue):
 		dialogue.StartDialogue()
 		is_dualogue_continue=true
@@ -21,7 +21,13 @@ func _ready():
 	pass # Replace with function body.
 
 func interact(inventory, targets, dialogue):
-	if inventory.isInInventory('spirt_jar') && inventory.isInInventory('krot'):
+	if inventory.wasInInventory('spirt_jar') && inventory.wasInInventory('krot'):
+		
+		if inventory.isInInventory('spirt_jar'):
+			inventory.removeItemFromInventory('spirt_jar') 
+		if inventory.isInInventory('krot'): 
+			inventory.removeItemFromInventory('krot')
+		
 		GLOBAL.putJar()
 		
 		var mesh = get_parent()

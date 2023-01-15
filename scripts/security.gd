@@ -32,7 +32,7 @@ func interact(inventory, targets, dialogue):
 		say(dialogue, inventory, 'Ого! ничего себе, спасибо за fancy suit, теперь я могу пойти в клуб')
 	else:
 		if (!isGone):
-			say(dialogue, inventory, 'Я хочу пойти в клуб. Но у меня нет fancy suit, можешь принести мне какую-нибудь')
+			say(dialogue, inventory, 'Я хочу пойти в клуб. Но у меня нет fancy suit, можешь принести мне какую-нибудь одежду')
 		else:
 			say(dialogue, inventory, 'Теперь я могу пойти в клуб')
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -142,6 +142,7 @@ skeleton = NodePath("../..")
 
 [node name="StaticBody" type="StaticBody" parent="MeshInstance16"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00220609, 0.146423, 0 )
+script = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance16/StaticBody"]
 shape = SubResource( 8 )
