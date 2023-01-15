@@ -9,6 +9,7 @@ var currrent_scene = 0
 var file_path = ''
 var current_track
 var isGovernorAlive = true
+var isJarPutted = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -52,3 +53,9 @@ func killGovernor():
 
 func checkGovernorAlive():
 	return isGovernorAlive
+
+func putJar():
+	isJarPutted  = true
+
+func checkJarPutted():
+	return isJarPutted
