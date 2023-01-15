@@ -8,6 +8,7 @@ var scenes = ['root', '2D']
 var currrent_scene = 0
 var file_path = ''
 var current_track
+var isGovernorAlive = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,3 +46,9 @@ func stopMusic(track_name):
 	current_track = GLOBAL.get_node('sfx/' + track_name)
 	current_track.stop()
 	
+
+func killGovernor():
+	isGovernorAlive  = false
+
+func checkGovernorAlive():
+	return isGovernorAlive

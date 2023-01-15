@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/jar/MaterialJar.material" type="Material" id=1]
+[ext_resource path="res://scripts/empty jar.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "jar_Cylinder"
@@ -26,6 +27,7 @@ data = PoolVector3Array( 0.1951, -0.7864, -0.9808, 0.3827, 1.5318, -0.9239, 0.19
 mesh = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Cylinder"]
+script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Cylinder/StaticBody"]
 shape = SubResource( 2 )

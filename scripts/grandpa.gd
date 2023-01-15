@@ -8,13 +8,13 @@ func _ready():
 
 
 func interact(inventory, targets, dialogue):
-	#get_tree().change_scene("res://scenes/ClsCutScene.tscn")
-	inventory.addMoneyToInventory()
 	dialogue.SpeakerIs("Дед")
 	if(!is_dualogue_continue):
 		dialogue.StartDialogue()
 		is_dualogue_continue=true
-		dialogue.ChangeTextTo("ХАХА,Я НЕ ДЕД")
+		dialogue.ChangeTextTo("Хррррр… Хррр…. Хр")
+		if (inventory.isInInventory('krotovuha')):
+			pass
 	else:
 		dialogue.CloseDialogue()
 		is_dualogue_continue=false
