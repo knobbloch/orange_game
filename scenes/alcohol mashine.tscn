@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/alcogol mashin/alcohol_mashine.png" type="Texture" id=1]
+[ext_resource path="res://scripts/alcohol mashine.gd" type="Script" id=2]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -19,6 +20,7 @@ mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
 shape = SubResource( 3 )

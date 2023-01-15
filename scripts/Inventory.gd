@@ -8,7 +8,7 @@ onready var inventCells = [$ColorRect/TextureRect2, $ColorRect/TextureRect3, $Co
 onready var labelAmountMoney = $ColorRect/TextureRect/money
 
 var TEXTURES = {
-	'krotovuha': 'dogecoin.png',
+	'krotovuha': 'krotovuha.png',
 	'fancy_suit': 'fancy_suit.png',
 	'empty_jar': 'jar.png',
 	'spirt_jar': 'spirt_jar.png',

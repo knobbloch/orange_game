@@ -15,6 +15,7 @@ func say(dialogue, text):
 	else:
 		dialogue.CloseDialogue()
 		is_dualogue_continue=false
+		
 
 func interact(inventory, targets, dialogue):
 	if !inventory.wasInInventory('alcohol_mashine'):

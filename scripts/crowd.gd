@@ -22,10 +22,12 @@ func say(dialogue, text):
 		is_dualogue_continue=false
 
 func interact(inventory, targets, dialogue):
-	if (load('res://scripts/governor.gd').new().get('isAlive')):
+	print(load('res://scripts/governor.gd').new().is_alive)
+	#if (load('res://scripts/governor.gd').new().get('is_alive')):
+	if GLOBAL.checkGovernorAlive():
 		say(dialogue, 'Хватит терпеть воблу! Нет вобле!!')
 	else:
-		get_parent().get_node("AnimationPlayer").play('crowdGone')
+		get_parent().get_parent().get_node("AnimationPlayer").play('crowdGone')
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
