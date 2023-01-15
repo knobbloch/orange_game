@@ -21,8 +21,7 @@ func _ready():
 	pass # Replace with function body.
 
 func interact(inventory, targets, dialogue):
-	if inventory.wasInInventory('spirt_jar') && inventory.wasInInventory('krot'):
-		
+	if targets.isSpirtCompleted() && targets.isKrotCompleted():
 		if inventory.isInInventory('spirt_jar'):
 			inventory.removeItemFromInventory('spirt_jar') 
 		if inventory.isInInventory('krot'): 
