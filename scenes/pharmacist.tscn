@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/Mackuin/Texture2DCharacter_Eyes_TEX_png.material" type="Material" id=1]
 [ext_resource path="res://assets/Mackuin/Character_Mcqueen_Wheel_MAT.material" type="Material" id=2]
 [ext_resource path="res://assets/Mackuin/Default-Material.material" type="Material" id=3]
 [ext_resource path="res://assets/Mackuin/Character_Mcqueen_Body_MAT.material" type="Material" id=4]
+[ext_resource path="res://scripts/pharmacist.gd" type="Script" id=5]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Sketchfab_Scene_Object_0"
@@ -106,7 +107,7 @@ tracks/1/keys = {
 [node name="pharmacist" type="Spatial"]
 
 [node name="Sketchfab_model" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0 )
+transform = Transform( 0.97424, -0.225512, 5.00739e-17, 0, 2.22045e-16, 1, -0.225512, -0.97424, 2.16325e-16, 0.321451, 0, 4.86198 )
 
 [node name="LightingMcqueenobjcleanermaterialmergergles" type="Spatial" parent="Sketchfab_model"]
 
@@ -114,6 +115,7 @@ transform = Transform( 1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Sketchfab_model/LightingMcqueenobjcleanermaterialmergergles/Object_2"]
+script = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Sketchfab_model/LightingMcqueenobjcleanermaterialmergergles/Object_2/StaticBody"]
 shape = SubResource( 5 )
@@ -128,6 +130,7 @@ mesh = SubResource( 3 )
 mesh = SubResource( 4 )
 
 [node name="StaticBody" type="StaticBody" parent="Sketchfab_model/LightingMcqueenobjcleanermaterialmergergles/Object_5"]
+script = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Sketchfab_model/LightingMcqueenobjcleanermaterialmergergles/Object_5/StaticBody"]
 shape = SubResource( 6 )

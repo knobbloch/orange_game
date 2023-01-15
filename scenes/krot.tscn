@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Krot/material_1.material" type="Material" id=1]
 [ext_resource path="res://assets/Krot/material_2.material" type="Material" id=2]
 [ext_resource path="res://assets/Krot/_001.material" type="Material" id=3]
 [ext_resource path="res://assets/Krot/material_3.material" type="Material" id=4]
+[ext_resource path="res://scripts/krot.gd" type="Script" id=5]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "mole_Cube_����������_0"
@@ -84,9 +85,11 @@ transform = Transform( 73.7606, 0, 0, 0, -8.79295e-06, 73.7606, 0, -73.7606, -8.
 mesh = SubResource( 1 )
 
 [node name="Cube_��������_0" type="MeshInstance" parent="1ef4f62929fc478b88f7cad2901b4c03fbx/RootNode/Cube"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="1ef4f62929fc478b88f7cad2901b4c03fbx/RootNode/Cube/Cube_��������_0"]
+script = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="1ef4f62929fc478b88f7cad2901b4c03fbx/RootNode/Cube/Cube_��������_0/StaticBody"]
 shape = SubResource( 5 )

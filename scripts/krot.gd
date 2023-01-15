@@ -12,7 +12,8 @@ func _ready():
 
 func interact(inventory, targets, dialogue):
 	inventory.addItemToInventory('krot')
-	get_parent().queue_free()
+	targets.setKrotTaskCompleted()
+	get_parent().get_parent().get_parent().get_parent().queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

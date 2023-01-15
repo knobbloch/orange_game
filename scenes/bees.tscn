@@ -525,7 +525,7 @@ surfaces/0 = {
 }
 
 [sub_resource type="BoxShape" id=44]
-extents = Vector3( 2.04587, 2.37715, 3.51891 )
+extents = Vector3( 2.17245, 2.37715, 3.51891 )
 
 [node name="bees" type="Spatial"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
@@ -744,4 +744,438 @@ transform = Transform( 1, 0, 0, 0, -1.34359e-07, -1, 0, 1, -1.34359e-07, 0, 0, 0
 
 [node name="CollisionShape" type="CollisionShape" parent="bee"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.103681, 0, -0.441735 )
+shape = SubResource( 44 )
+
+[node name="bee2" type="StaticBody" parent="."]
+transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -4.17, 6.31728, 0 )
+script = ExtResource( 12 )
+
+[node name="Sketchfab_model" type="Spatial" parent="bee2"]
+transform = Transform( 1, 0, 0, 0, -1.34359e-07, 1, 0, -1, -1.34359e-07, 0, 0, 0 )
+
+[node name="root" type="Spatial" parent="bee2/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Spatial" parent="bee2/Sketchfab_model/root"]
+transform = Transform( 1, 0, 0, 0, -1.34359e-07, -1, 0, 1, -1.34359e-07, 0, 0, 0 )
+
+[node name="Bee_0" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1.78016, 0, 0, 0, 1.78016, 0, 0, 0, 2.96693, 0, 0, 0 )
+
+[node name="Object_4" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 1 )
+
+[node name="Object_5" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+
+[node name="Object_6" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+
+[node name="Object_7" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 4 )
+
+[node name="Object_8" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 5 )
+
+[node name="Object_9" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 6 )
+
+[node name="Object_10" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 26 )
+
+[node name="Object_11" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 27 )
+
+[node name="Object_12" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 28 )
+
+[node name="Object_13" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 29 )
+
+[node name="Object_14" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 30 )
+
+[node name="Object_15" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 31 )
+
+[node name="leg004_1" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, 1.02064, -2.05742, -0.799504 )
+
+[node name="Object_11" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg004_1"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -2.38419e-07, 0 )
+mesh = SubResource( 7 )
+
+[node name="Object_12" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg004_1"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -2.38419e-07, 0 )
+mesh = SubResource( 32 )
+
+[node name="USR_2" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 6.50645e-08, -1.04145, 0.0166603, 1.0916, 6.20832e-08, 1.9401e-09, -2.03327e-09, 0.0166603, 1.04145, 0.790497, 1.88373, -4.26433 )
+
+[node name="Object_13" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/USR_2"]
+transform = Transform( 1, -1.42109e-14, 0, 0, 1, 0, 0, 0, 1, 1.41121e-07, 0, 0 )
+mesh = SubResource( 8 )
+
+[node name="Object_14" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/USR_2"]
+transform = Transform( 1, -1.42109e-14, 0, 0, 1, 0, 0, 0, 1, 1.41121e-07, 0, 0 )
+mesh = SubResource( 33 )
+
+[node name="USL_3" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( -3.90387e-07, -1.04155, -0.00790621, 1.0916, -3.72499e-07, -2.66764e-09, 0, -0.00790621, 1.04155, -1.05198, 1.88373, -4.26433 )
+
+[node name="Object_15" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/USL_3"]
+transform = Transform( 1, -1.42109e-14, 0, 0, 1, 0, 0, 0, 1, 1.02723e-08, 0, 0 )
+mesh = SubResource( 9 )
+
+[node name="Object_16" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/USL_3"]
+transform = Transform( 1, -1.42109e-14, 0, 0, 1, 0, 0, 0, 1, 1.02723e-08, 0, 0 )
+mesh = SubResource( 34 )
+
+[node name="RingL_4" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( -0.955611, -0.0250482, 0.26895, -0.0433666, 0.997485, -0.051356, -0.291425, -0.0662993, -0.87427, -1.72827, 2.22768, -1.24196 )
+
+[node name="Object_17" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/RingL_4"]
+transform = Transform( 1, 0, -3.72529e-09, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, -1.78814e-07, -5.96046e-08 )
+mesh = SubResource( 10 )
+
+[node name="Object_18" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/RingL_4"]
+transform = Transform( 1, 0, -3.72529e-09, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, -1.78814e-07, -5.96046e-08 )
+mesh = SubResource( 11 )
+
+[node name="Object_19" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/RingL_4"]
+transform = Transform( 1, 0, -3.72529e-09, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, -1.78814e-07, -5.96046e-08 )
+mesh = SubResource( 35 )
+
+[node name="Object_20" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/RingL_4"]
+transform = Transform( 1, 0, -3.72529e-09, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, -1.78814e-07, -5.96046e-08 )
+mesh = SubResource( 36 )
+
+[node name="RingR_5" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 0.956477, -0.023056, -0.266503, -0.0429561, -0.997138, -0.0569927, -0.28863, 0.0719975, -0.87467, 1.47959, 2.22768, -1.24196 )
+
+[node name="Object_20" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/RingR_5"]
+transform = Transform( 1, 5.96046e-08, 3.72529e-09, -5.96046e-08, 1, 0, 3.72529e-09, -1.49012e-08, 1, 0, -1.19209e-07, 1.19209e-07 )
+mesh = SubResource( 12 )
+
+[node name="Object_21" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/RingR_5"]
+transform = Transform( 1, 5.96046e-08, 3.72529e-09, -5.96046e-08, 1, 0, 3.72529e-09, -1.49012e-08, 1, 0, -1.19209e-07, 1.19209e-07 )
+mesh = SubResource( 13 )
+
+[node name="Object_22" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/RingR_5"]
+transform = Transform( 1, 5.96046e-08, 3.72529e-09, -5.96046e-08, 1, 0, 3.72529e-09, -1.49012e-08, 1, 0, -1.19209e-07, 1.19209e-07 )
+mesh = SubResource( 37 )
+
+[node name="Object_23" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/RingR_5"]
+transform = Transform( 1, 5.96046e-08, 3.72529e-09, -5.96046e-08, 1, 0, 3.72529e-09, -1.49012e-08, 1, 0, -1.19209e-07, 1.19209e-07 )
+mesh = SubResource( 38 )
+
+[node name="leg001_7" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, -0.799504 )
+
+[node name="Object_23" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg001_7"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -2.38419e-07, 0 )
+mesh = SubResource( 14 )
+
+[node name="Object_24" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg001_7"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -2.38419e-07, 0 )
+mesh = SubResource( 39 )
+
+[node name="leg002_8" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.80933, 0.587353, 0, -0.587353, -0.80933, 1.02064, -2.05742, 0.374991 )
+
+[node name="Object_25" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg002_8"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -5.96046e-08, 8.9407e-08 )
+mesh = SubResource( 15 )
+
+[node name="Object_26" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg002_8"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -5.96046e-08, 8.9407e-08 )
+mesh = SubResource( 40 )
+
+[node name="leg003_9" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, 0.374991 )
+
+[node name="Object_27" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg003_9"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -5.96046e-08, 8.9407e-08 )
+mesh = SubResource( 16 )
+
+[node name="Object_28" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg003_9"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -5.96046e-08, 8.9407e-08 )
+mesh = SubResource( 41 )
+
+[node name="leg005_10" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.739337, 0.673336, 0, -0.673336, -0.739337, 1.02064, -2.05742, 1.57186 )
+
+[node name="Object_29" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg005_10"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 1.19209e-07 )
+mesh = SubResource( 17 )
+
+[node name="Object_30" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg005_10"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 1.19209e-07 )
+mesh = SubResource( 42 )
+
+[node name="leg006_11" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, 1.57186 )
+
+[node name="Object_31" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg006_11"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 1.19209e-07 )
+mesh = SubResource( 18 )
+
+[node name="Object_32" type="MeshInstance" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode/leg006_11"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 1.19209e-07 )
+mesh = SubResource( 43 )
+
+[node name="Bee_1" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1.78016, 0, 0, 0, 1.78016, 0, 0, 0, 2.96693, 0, 0, 0 )
+
+[node name="leg004_2" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, 1.02064, -2.05742, -0.799504 )
+
+[node name="USR_3" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 6.50645e-08, -1.04145, 0.0166603, 1.0916, 6.20832e-08, 1.9401e-09, -2.03327e-09, 0.0166603, 1.04145, 0.790497, 1.88373, -4.26433 )
+
+[node name="USL_4" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( -3.90387e-07, -1.04155, -0.00790621, 1.0916, -3.72499e-07, -2.66764e-09, 0, -0.00790621, 1.04155, -1.05198, 1.88373, -4.26433 )
+
+[node name="RingL_5" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( -0.955611, -0.0250482, 0.26895, -0.0433666, 0.997485, -0.051356, -0.291425, -0.0662993, -0.87427, -1.72827, 2.22768, -1.24196 )
+
+[node name="RingR_6" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 0.956477, -0.023056, -0.266503, -0.0429561, -0.997138, -0.0569927, -0.28863, 0.0719975, -0.87467, 1.47959, 2.22768, -1.24196 )
+
+[node name="leg001_8" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, -0.799504 )
+
+[node name="leg002_9" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.80933, 0.587353, 0, -0.587353, -0.80933, 1.02064, -2.05742, 0.374991 )
+
+[node name="leg003_10" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, 0.374991 )
+
+[node name="leg005_11" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.739337, 0.673336, 0, -0.673336, -0.739337, 1.02064, -2.05742, 1.57186 )
+
+[node name="leg006_12" type="Spatial" parent="bee2/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, 1.57186 )
+
+[node name="GLTF_SceneRootNode2" type="Spatial" parent="bee2/Sketchfab_model/root"]
+transform = Transform( 1, 0, 0, 0, -1.34359e-07, -1, 0, 1, -1.34359e-07, 0, 0, 0 )
+
+[node name="root2" type="Spatial" parent="bee2/Sketchfab_model"]
+
+[node name="CollisionShape" type="CollisionShape" parent="bee2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.103681, 0, -0.441735 )
+shape = SubResource( 44 )
+
+[node name="bee3" type="StaticBody" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.65359, 7.80626, 0 )
+script = ExtResource( 12 )
+
+[node name="Sketchfab_model" type="Spatial" parent="bee3"]
+transform = Transform( 1, 0, 0, 0, -1.34359e-07, 1, 0, -1, -1.34359e-07, 0, 0, 0 )
+
+[node name="root" type="Spatial" parent="bee3/Sketchfab_model"]
+
+[node name="GLTF_SceneRootNode" type="Spatial" parent="bee3/Sketchfab_model/root"]
+transform = Transform( 1, 0, 0, 0, -1.34359e-07, -1, 0, 1, -1.34359e-07, 0, 0, 0 )
+
+[node name="Bee_0" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1.78016, 0, 0, 0, 1.78016, 0, 0, 0, 2.96693, 0, 0, 0 )
+
+[node name="Object_4" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 1 )
+
+[node name="Object_5" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+
+[node name="Object_6" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+
+[node name="Object_7" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 4 )
+
+[node name="Object_8" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 5 )
+
+[node name="Object_9" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 6 )
+
+[node name="Object_10" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 26 )
+
+[node name="Object_11" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 27 )
+
+[node name="Object_12" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 28 )
+
+[node name="Object_13" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 29 )
+
+[node name="Object_14" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 30 )
+
+[node name="Object_15" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/Bee_0"]
+mesh = SubResource( 31 )
+
+[node name="leg004_1" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, 1.02064, -2.05742, -0.799504 )
+
+[node name="Object_11" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg004_1"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -2.38419e-07, 0 )
+mesh = SubResource( 7 )
+
+[node name="Object_12" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg004_1"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -2.38419e-07, 0 )
+mesh = SubResource( 32 )
+
+[node name="USR_2" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 6.50645e-08, -1.04145, 0.0166603, 1.0916, 6.20832e-08, 1.9401e-09, -2.03327e-09, 0.0166603, 1.04145, 0.790497, 1.88373, -4.26433 )
+
+[node name="Object_13" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/USR_2"]
+transform = Transform( 1, -1.42109e-14, 0, 0, 1, 0, 0, 0, 1, 1.41121e-07, 0, 0 )
+mesh = SubResource( 8 )
+
+[node name="Object_14" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/USR_2"]
+transform = Transform( 1, -1.42109e-14, 0, 0, 1, 0, 0, 0, 1, 1.41121e-07, 0, 0 )
+mesh = SubResource( 33 )
+
+[node name="USL_3" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( -3.90387e-07, -1.04155, -0.00790621, 1.0916, -3.72499e-07, -2.66764e-09, 0, -0.00790621, 1.04155, -1.05198, 1.88373, -4.26433 )
+
+[node name="Object_15" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/USL_3"]
+transform = Transform( 1, -1.42109e-14, 0, 0, 1, 0, 0, 0, 1, 1.02723e-08, 0, 0 )
+mesh = SubResource( 9 )
+
+[node name="Object_16" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/USL_3"]
+transform = Transform( 1, -1.42109e-14, 0, 0, 1, 0, 0, 0, 1, 1.02723e-08, 0, 0 )
+mesh = SubResource( 34 )
+
+[node name="RingL_4" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( -0.955611, -0.0250482, 0.26895, -0.0433666, 0.997485, -0.051356, -0.291425, -0.0662993, -0.87427, -1.72827, 2.22768, -1.24196 )
+
+[node name="Object_17" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/RingL_4"]
+transform = Transform( 1, 0, -3.72529e-09, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, -1.78814e-07, -5.96046e-08 )
+mesh = SubResource( 10 )
+
+[node name="Object_18" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/RingL_4"]
+transform = Transform( 1, 0, -3.72529e-09, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, -1.78814e-07, -5.96046e-08 )
+mesh = SubResource( 11 )
+
+[node name="Object_19" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/RingL_4"]
+transform = Transform( 1, 0, -3.72529e-09, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, -1.78814e-07, -5.96046e-08 )
+mesh = SubResource( 35 )
+
+[node name="Object_20" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/RingL_4"]
+transform = Transform( 1, 0, -3.72529e-09, -1.49012e-08, 1, 0, -7.45058e-09, 0, 1, 0, -1.78814e-07, -5.96046e-08 )
+mesh = SubResource( 36 )
+
+[node name="RingR_5" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 0.956477, -0.023056, -0.266503, -0.0429561, -0.997138, -0.0569927, -0.28863, 0.0719975, -0.87467, 1.47959, 2.22768, -1.24196 )
+
+[node name="Object_20" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/RingR_5"]
+transform = Transform( 1, 5.96046e-08, 3.72529e-09, -5.96046e-08, 1, 0, 3.72529e-09, -1.49012e-08, 1, 0, -1.19209e-07, 1.19209e-07 )
+mesh = SubResource( 12 )
+
+[node name="Object_21" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/RingR_5"]
+transform = Transform( 1, 5.96046e-08, 3.72529e-09, -5.96046e-08, 1, 0, 3.72529e-09, -1.49012e-08, 1, 0, -1.19209e-07, 1.19209e-07 )
+mesh = SubResource( 13 )
+
+[node name="Object_22" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/RingR_5"]
+transform = Transform( 1, 5.96046e-08, 3.72529e-09, -5.96046e-08, 1, 0, 3.72529e-09, -1.49012e-08, 1, 0, -1.19209e-07, 1.19209e-07 )
+mesh = SubResource( 37 )
+
+[node name="Object_23" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/RingR_5"]
+transform = Transform( 1, 5.96046e-08, 3.72529e-09, -5.96046e-08, 1, 0, 3.72529e-09, -1.49012e-08, 1, 0, -1.19209e-07, 1.19209e-07 )
+mesh = SubResource( 38 )
+
+[node name="leg001_7" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, -0.799504 )
+
+[node name="Object_23" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg001_7"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -2.38419e-07, 0 )
+mesh = SubResource( 14 )
+
+[node name="Object_24" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg001_7"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -2.38419e-07, 0 )
+mesh = SubResource( 39 )
+
+[node name="leg002_8" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.80933, 0.587353, 0, -0.587353, -0.80933, 1.02064, -2.05742, 0.374991 )
+
+[node name="Object_25" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg002_8"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -5.96046e-08, 8.9407e-08 )
+mesh = SubResource( 15 )
+
+[node name="Object_26" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg002_8"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -5.96046e-08, 8.9407e-08 )
+mesh = SubResource( 40 )
+
+[node name="leg003_9" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, 0.374991 )
+
+[node name="Object_27" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg003_9"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -5.96046e-08, 8.9407e-08 )
+mesh = SubResource( 16 )
+
+[node name="Object_28" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg003_9"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -5.96046e-08, 8.9407e-08 )
+mesh = SubResource( 41 )
+
+[node name="leg005_10" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.739337, 0.673336, 0, -0.673336, -0.739337, 1.02064, -2.05742, 1.57186 )
+
+[node name="Object_29" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg005_10"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 1.19209e-07 )
+mesh = SubResource( 17 )
+
+[node name="Object_30" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg005_10"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 1.19209e-07 )
+mesh = SubResource( 42 )
+
+[node name="leg006_11" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, 1.57186 )
+
+[node name="Object_31" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg006_11"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 1.19209e-07 )
+mesh = SubResource( 18 )
+
+[node name="Object_32" type="MeshInstance" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode/leg006_11"]
+transform = Transform( 1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 1.19209e-07 )
+mesh = SubResource( 43 )
+
+[node name="Bee_1" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1.78016, 0, 0, 0, 1.78016, 0, 0, 0, 2.96693, 0, 0, 0 )
+
+[node name="leg004_2" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, 1.02064, -2.05742, -0.799504 )
+
+[node name="USR_3" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 6.50645e-08, -1.04145, 0.0166603, 1.0916, 6.20832e-08, 1.9401e-09, -2.03327e-09, 0.0166603, 1.04145, 0.790497, 1.88373, -4.26433 )
+
+[node name="USL_4" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( -3.90387e-07, -1.04155, -0.00790621, 1.0916, -3.72499e-07, -2.66764e-09, 0, -0.00790621, 1.04155, -1.05198, 1.88373, -4.26433 )
+
+[node name="RingL_5" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( -0.955611, -0.0250482, 0.26895, -0.0433666, 0.997485, -0.051356, -0.291425, -0.0662993, -0.87427, -1.72827, 2.22768, -1.24196 )
+
+[node name="RingR_6" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 0.956477, -0.023056, -0.266503, -0.0429561, -0.997138, -0.0569927, -0.28863, 0.0719975, -0.87467, 1.47959, 2.22768, -1.24196 )
+
+[node name="leg001_8" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, -0.799504 )
+
+[node name="leg002_9" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.80933, 0.587353, 0, -0.587353, -0.80933, 1.02064, -2.05742, 0.374991 )
+
+[node name="leg003_10" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, 0.374991 )
+
+[node name="leg005_11" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.739337, 0.673336, 0, -0.673336, -0.739337, 1.02064, -2.05742, 1.57186 )
+
+[node name="leg006_12" type="Spatial" parent="bee3/Sketchfab_model/root/GLTF_SceneRootNode"]
+transform = Transform( 1, 0, 0, 0, -0.781105, 0.6244, 0, -0.6244, -0.781105, -1.19085, -2.05742, 1.57186 )
+
+[node name="GLTF_SceneRootNode2" type="Spatial" parent="bee3/Sketchfab_model/root"]
+transform = Transform( 1, 0, 0, 0, -1.34359e-07, -1, 0, 1, -1.34359e-07, 0, 0, 0 )
+
+[node name="root2" type="Spatial" parent="bee3/Sketchfab_model"]
+
+[node name="CollisionShape" type="CollisionShape" parent="bee3"]
+transform = Transform( 5.23182, 0, 0, 0, 4.64029, 0, 0, 0, 2.52691, -9.59879, -8.94618, -2.39994 )
 shape = SubResource( 44 )

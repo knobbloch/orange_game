@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/Protein/Material.material" type="Material" id=1]
+[ext_resource path="res://scripts/protein.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "protein_Cube"
@@ -28,6 +29,7 @@ transform = Transform( 1.467, 0, 0, 0, 0.197, 0, 0, 0, 1.75, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Cube"]
+script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Cube/StaticBody"]
 shape = SubResource( 2 )
