@@ -698,7 +698,7 @@ transform = Transform( -4.30705e-09, -0.0999895, -0.00145554, -4.4343e-09, -0.00
 transform = Transform( -1.17767, 0, -1.02955e-07, 0, 1.12816, 0, 8.74228e-08, 0, -1, -6.78904, 0.0624256, -8.1195 )
 
 [node name="gigachad" parent="gym" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80073, 1.32192, -7.95298 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.16766, 1.32192, -7.95298 )
 
 [node name="Bench" parent="gym" instance=ExtResource( 42 )]
 transform = Transform( 4, 0, 0, 0, 2, 0, 0, 0, 4, -8.12474, 0.468135, -4.31036 )
