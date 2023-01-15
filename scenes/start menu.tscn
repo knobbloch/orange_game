@@ -1,0 +1,101 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/start menu/BrnAuthorsPassive.png" type="Texture" id=1]
+[ext_resource path="res://assets/start menu/MenuBackground.png" type="Texture" id=2]
+[ext_resource path="res://assets/start menu/BtnPlayPassive.png" type="Texture" id=3]
+[ext_resource path="res://scripts/menuButtonAuthors.gd" type="Script" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+ratio = 2.1681
+stretch_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer"]
+margin_left = -138.43
+margin_right = 1162.43
+margin_bottom = 600.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="AspectRatioContainer/HBoxContainer"]
+margin_right = 294.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.93
+
+[node name="Control" type="Control" parent="AspectRatioContainer/HBoxContainer/AspectRatioContainer"]
+margin_top = 153.0
+margin_right = 294.0
+margin_bottom = 447.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/HBoxContainer"]
+margin_left = 298.0
+margin_right = 585.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.84
+
+[node name="Control2" type="Control" parent="AspectRatioContainer/HBoxContainer/VBoxContainer"]
+margin_right = 287.0
+margin_bottom = 334.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 17.56
+
+[node name="Button" type="Button" parent="AspectRatioContainer/HBoxContainer/VBoxContainer"]
+margin_top = 338.0
+margin_right = 287.0
+margin_bottom = 399.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.2
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="AspectRatioContainer/HBoxContainer/VBoxContainer"]
+margin_top = 403.0
+margin_right = 287.0
+margin_bottom = 464.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.2
+icon = ExtResource( 1 )
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="Control" type="Control" parent="AspectRatioContainer/HBoxContainer/VBoxContainer"]
+margin_top = 468.0
+margin_right = 287.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 6.87
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="AspectRatioContainer/HBoxContainer"]
+margin_left = 589.0
+margin_right = 1300.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 9.5
+
+[node name="Control" type="Control" parent="AspectRatioContainer/HBoxContainer/AspectRatioContainer2"]
+margin_left = 55.5
+margin_right = 655.5
+margin_bottom = 600.0
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="AspectRatioContainer/HBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/HBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]

@@ -16,6 +16,7 @@ func say(dialogue, text):
 func interact(inventory, targets, dialogue):
 	if (inventory.isInInventory('alcohol_mashine') && !isMashineReceived && !is_dualogue_continue):
 		say(dialogue, 'ура, спасибо, вот тебе остатки моего спирта, чтобы тоже шестерёнки смазывал')
+		targets.setSpirtTaskCompleted()
 		isMashineReceived = true
 		inventory.removeItemFromInventory('alcohol_mashine')
 		inventory.addItemToInventory('spirt_jar')
