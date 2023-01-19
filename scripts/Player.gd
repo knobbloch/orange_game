@@ -40,9 +40,6 @@ func _physics_process(delta):
 		gravity_local = Vector3.UP * JUMP_FORCE
 		
 	if Input.is_action_just_pressed("interaction"):
-		if ($Dialogue/RichTextLabel.text == "А вот cum в банке отдай мне, с этим в dungeon нельзя" or $Dialogue/RichTextLabel.text == "С твоим спиртом что-то случилось, когда я дотронулся. Забирай его обратно"):
-			dialogue.CloseDialogue()
-			$LookPivot/Camera.make_current()
 		if $LookPivot/Camera/InteractionRay.is_colliding():
 			var x = $LookPivot/Camera/InteractionRay.get_collider()
 			print("COLLIDING")

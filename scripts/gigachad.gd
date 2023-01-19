@@ -30,6 +30,10 @@ func interact(inventory, targets, dialogue):
 		dialogue.CloseDialogue()
 		var anim = self.get_parent().get_parent().get_node("AnimationPlayer")
 		anim.play("move")
+	elif (dialogue.get_node("RichTextLabel").text == "А вот cum в банке отдай мне, с этим в dungeon нельзя" or dialogue.get_node("RichTextLabel").text == "С твоим спиртом что-то случилось, когда я дотронулся. Забирай его обратно"):
+		$LookPivot/Camera.make_current()
+		dialogue.is_dualogue_continue=false
+		dialogue.object = null
 	else:
 		dialogue.CloseDialogue()
 		dialogue.is_dualogue_continue=false
