@@ -26,6 +26,6 @@ func _process(delta):
 			$DialogeBack.visible=!$DialogeBack.visible
 		MainText=OpenTxtFile()
 	if nomber==22:
-		nomber-=1
+		GLOBAL.nextScene('start menu')
 	$Dogecoin.texture = load("res://assets/cut scenes/"+String(nomber)+".png")
 	$RichTextLabel.text= MainText

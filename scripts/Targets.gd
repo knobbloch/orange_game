@@ -6,7 +6,7 @@ onready var getKrotTaskIndicator = $TextureRect3
  
  
 var uncompletedJarTaskTexture = 'res://assets/targets/jarUncomplited.png' 
-var uncompletedSpirtTaskTexture = 'res://assets/targets/SpirtUncomplited.png' 
+var uncompletedSpirtTaskTexture = 'res://assets/targets/spirtUncomplited.png' 
 var uncompletedKrotTaskTexture = 'res://assets/targets/krotUncomplited.png' 
 var completedJarTaskTexture = 'res://assets/targets/jarComplited.png' 
 var completedSpirtTaskTexture = 'res://assets/targets/spirtComplited.png' 

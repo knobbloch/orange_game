@@ -13,14 +13,14 @@ func _ready():
 	pass
 
 func _on_Area2_body_entered(body):
-	if (body == player and (inventory.wasInInventory("spirt_jar") or inventory.wasInInventory("alpha_spirt_jar"))):
+	if (body == player and (inventory.wasInInventory("spirt_jar") or targets.isSpirtCompleted())):
 		dialogue.StartDialogue()
 		dialogue.ChangeTextTo(text1)
 		dialogue.SpeakerIs("GIGACHAD")
 		camera2.make_current()
-		if inventory.wasInInventory("spirt_jar"):
+		if inventory.isInInventory("spirt_jar"):
 			inventory.removeItemFromInventory("spirt_jar")
-		elif inventory.wasInInventory("alpha_spirt_jar"):
+		elif targets.isSpirtCompleted():
 			inventory.removeItemFromInventory("alpha_spirt_jar")
 			targets.setSpirtTaskUncompleted()
 	

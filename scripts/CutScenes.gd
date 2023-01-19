@@ -7,23 +7,22 @@ func _ready():
 	MainText=OpenTxtFile()
 	pass 
 
+func going():
+	GLOBAL.nextScene('root')
 var nomber=1
 
 func OpenTxtFile():
 	var content = file.get_line()
 	return content
-
-func nomber_is(nomberIs):
-	nomber=nomberIs
 	
 func _process(delta):
+	if nomber==10:
+		going()
 	if Input.is_action_just_pressed("interactionCutScene"):
 		nomber+=1
 		MainText=OpenTxtFile()
-	if nomber==10:
-		GLOBAL.nextScene("root")
-		#Load.load_scene(self,"res://scenes/root.tscn")
-		
+		if nomber==10:
+			$DialogeBack.visible=!$DialogeBack.visible
 	$Dogecoin.texture = load("res://assets/cut scenes/"+String(nomber)+".png")
-	$RichTextLabel.text= MainText
+	$RichTextLabel.text=MainText
 
