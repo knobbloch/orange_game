@@ -1,0 +1,13 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+valid=false
+
+[deps]
+
+source_file="res://assets/cut scenes/Text_fore_the_cut_scenes2.csv"
+[params]
+
+compress=true
+delimiter=0
